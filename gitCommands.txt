@@ -14,7 +14,7 @@ git clone git@github.com:JeredSundquist/Project-AES.git
 git checkout -b <branch name>
 
 //initial upload of branch to gitHub
-git push origin <branch name>
+git push --set-upstream origin <branch name>
 
 //Working With The Branch______________________________________________
 
