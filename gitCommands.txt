@@ -1,0 +1,63 @@
+//for git documentation
+git-scm.com/docs
+
+//!!!MAKE SURE YOUR ARE NOT MAKING CHANGES IN MASTER BRANCH!!!
+
+//Initial Setup________________________________________________________
+
+//this will clone the repository to your local computer
+git clone git@github.com:JeredSundquist/Project-AES.git
+
+//Initial Branch Creation______________________________________________
+
+//to create a branch
+git checkout -b <branch name>
+
+//initial upload of branch to gitHub
+git push --set-upstream origin <branch name>
+
+//Working With The Branch______________________________________________
+
+//to navigate to a specific branch
+git checkout <branch name>
+
+//to push changes to gitHub
+git push
+
+//to add a changed file to staging
+git add <file name>
+
+//to add all changed files to staging
+git add --all
+
+//to add and commit all changed files to staging with a message-(WARNING: WILL ADD ALL FILE CHANGES!)
+git commit -am "your message"
+
+//to pull a file out of staging
+git reset <filename>
+
+//to commit whats in staging with a message
+git commit -m "your message"
+
+//show local branches
+git branch
+
+//to pull in branches from gitHub
+git fetch
+
+//gitHub's source control flow_________________________________________________________________________________
+
+GitHub-->Local-->Branch-->LastCommit-->GitAdd-->Stage-->Commit-->Merge-->SubmitRequestToIncludeBranchIntoDevelop
+
+//command flow_________________________________________________________________________________________________
+
+go to git bash command line
+get to project directory: cd <name of project>
+checkout the branch you are working on: git checkout <branch name>
+pull changes from gitHub to local: git pull
+do your code changes-(in small workable chunks)
+add changed files to stage: git add <file name>
+commit to branch: git commit -m "your message"
+push local code changes to gitHub: git push
+
+if many changes have been made to develop branch, merge current version of develop branch into your code: git pull origin develop
