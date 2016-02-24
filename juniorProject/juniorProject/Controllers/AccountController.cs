@@ -17,7 +17,7 @@ using juniorProject.Models;
 using juniorProject.Providers;
 using juniorProject.Results;
 
-namespace juniorProject.Controllers
+namespace juniorProject.Controllers //
 {
     [Authorize]
     [RoutePrefix("api/Account")]
