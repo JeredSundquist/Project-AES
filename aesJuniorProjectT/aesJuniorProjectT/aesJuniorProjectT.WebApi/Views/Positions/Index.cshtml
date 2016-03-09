@@ -1,0 +1,51 @@
+﻿@model IEnumerable<aesJuniorProjectT.Entities.Shared.Net45.Models.Position>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.positions_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.positions_desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.store_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.test_id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.positions_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.positions_desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.store_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.test_id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.positions_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.positions_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.positions_id })
+        </td>
+    </tr>
+}
+
+</table>
