@@ -147,16 +147,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Models\entityModels.edmx.sql" />
     <Content Include="TrackableSharedEntities.Net45.ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contexts\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\aesDB\aesDB.csproj">
-      <Project>{11cc4488-eddb-4510-bcca-3ca06e14f9ab}</Project>
-      <Name>aesDB</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
