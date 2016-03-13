@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using System.Web;
 using AES.Entities.Shared.Net45.Models;
 using WebApiRestService;
 
 namespace AES.WebApplication.Client
 {
-    public class StoreSVCClient : WebApiClient<Store>
+    public class StoreSvcClient : WebApiClient<Store>
     {
-            public static readonly WebApiClientOptions options = new WebApiClientOptions()
+            public new static readonly WebApiClientOptions Options = new WebApiClientOptions()
             {
                 BaseAddress = "http://localhost:" + "59095" + "/",
                 ContentType = ContentType.Json,
@@ -22,15 +19,15 @@ namespace AES.WebApplication.Client
             /// <summary>
             /// Creates an instance of StoreClient using default options
             /// </summary>
-            public StoreSVCClient()
-                : this(options)
+            public StoreSvcClient()
+                : this(Options)
             {
             }
 
             /// <summary>
             /// Creates an instance of StoreClient using explicit options
             /// </summary>
-            private StoreSVCClient(WebApiClientOptions options)
+            private StoreSvcClient(WebApiClientOptions options)
                 : base(options)
             {
             }

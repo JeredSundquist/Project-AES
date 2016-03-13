@@ -11,7 +11,7 @@ namespace AES.WebApplication.Client
 {
     public class TestSVCClient : WebApiClient<Test>
     {
-        public static readonly WebApiClientOptions options = new WebApiClientOptions()
+        public static readonly WebApiClientOptions Options = new WebApiClientOptions()
         {
             BaseAddress = "http://localhost:" + "59095" + "/",
             ContentType = ContentType.Json,
@@ -23,7 +23,7 @@ namespace AES.WebApplication.Client
         /// Creates an instance of TestClient using default options
         /// </summary>
         public TestSVCClient()
-            : this(options)
+            : this(Options)
         {
         }
 
@@ -61,17 +61,17 @@ namespace AES.WebApplication.Client
             }
         }
 
-        public async Task<Test> CreateTest(Test Test)
+        public async Task<Test> CreateTest(Test test)
         {
-            return await CreateAsync(Test);
+            return await CreateAsync(test);
         }
 
-        public async Task<Test> EditTest(Test Test)
+        public async Task<Test> EditTest(Test test)
         {
-            return await EditAsync(Test);
+            return await EditAsync(test);
         }
 
-        public async Task DeleteStore(int id)
+        public async Task DeleteTest(int id)
         {
             await DeleteAsync(id);
         }

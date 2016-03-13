@@ -6,9 +6,9 @@ using WebApiRestService;
 
 namespace AES.WebApplication.Client
 {
-    public class PositionSVCClient : WebApiClient<Position>
+    public class PositionSvcClient : WebApiClient<Position>
     {
-        public static readonly WebApiClientOptions options = new WebApiClientOptions()
+        public new static readonly WebApiClientOptions Options = new WebApiClientOptions()
         {
             BaseAddress = "http://localhost:" + "59095" + "/",
             ContentType = ContentType.Json,
@@ -19,15 +19,15 @@ namespace AES.WebApplication.Client
         /// <summary>
         /// Creates an instance of positionClient using default options
         /// </summary>
-        public PositionSVCClient()
-            : this(options)
+        public PositionSvcClient()
+            : this(Options)
         {
         }
 
         /// <summary>
         /// Creates an instance of positionClient using explicit options
         /// </summary>
-        private PositionSVCClient(WebApiClientOptions options)
+        private PositionSvcClient(WebApiClientOptions options)
             : base(options)
         {
         }

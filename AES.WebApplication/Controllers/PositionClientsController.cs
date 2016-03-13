@@ -16,11 +16,11 @@ namespace AES.WebApplication.Controllers
 {
     public class PositionClientsController : Controller
     {
-        private readonly PositionSVCClient _client = new PositionSVCClient();
+        private readonly PositionSvcClient _client = new PositionSvcClient();
 
         public PositionClientsController()
         {
-            _client = new PositionSVCClient();
+            _client = new PositionSvcClient();
         }
 
         // GET: /PositionClients/
@@ -28,7 +28,7 @@ namespace AES.WebApplication.Controllers
         {
             IEnumerable<Position> positions = null;
 
-            using (var client = new PositionSVCClient())
+            using (var client = new PositionSvcClient())
             {
                 positions = await client.GetPositions();
             }
@@ -46,7 +46,7 @@ namespace AES.WebApplication.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            using (var client = new PositionSVCClient())
+            using (var client = new PositionSvcClient())
             {
                 position = await client.GetPositionById(id);
             }
@@ -116,7 +116,7 @@ namespace AES.WebApplication.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            using (var client = new PositionSVCClient())
+            using (var client = new PositionSvcClient())
             {
                 position = await client.GetPositionById(id);
             }
@@ -138,7 +138,7 @@ namespace AES.WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (var client = new PositionSVCClient())
+                using (var client = new PositionSvcClient())
                 {
                     await client.DeletePosition(position.PositionId);
                 }
@@ -176,7 +176,7 @@ namespace AES.WebApplication.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            using (var client = new PositionSVCClient())
+            using (var client = new PositionSvcClient())
             {
                 position = await client.GetPositionById(id);
             }
@@ -193,7 +193,7 @@ namespace AES.WebApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            using (var client = new PositionSVCClient())
+            using (var client = new PositionSvcClient())
             {
                 await client.DeletePosition(id);
 
