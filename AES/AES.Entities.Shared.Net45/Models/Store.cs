@@ -27,7 +27,8 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _StoreId;
 
-		public string StoreLocation
+        [Display(Name = "Location")]
+        public string StoreLocation
 		{ 
 			get { return _StoreLocation; }
 			set

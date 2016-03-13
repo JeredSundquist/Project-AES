@@ -15,7 +15,9 @@ namespace AES.Entities.Shared.Net45.Models
             AppliedPositions = new ChangeTrackingCollection<AppliedPosition>();
         }
 
-		public int PositionId
+        [Display(Name = "Position Id")]
+        [Key]
+        public int PositionId
 		{ 
 			get { return _PositionId; }
 			set
@@ -28,7 +30,8 @@ namespace AES.Entities.Shared.Net45.Models
 		private int _PositionId;
 
         [Required]
-		public string PositionName
+        [Display(Name = "Position")]
+        public string PositionName
 		{ 
 			get { return _PositionName; }
 			set
@@ -41,7 +44,8 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _PositionName;
 
         [Required]
-		public string PositionDesc
+        [Display(Name = "Description")]
+        public string PositionDesc
 		{ 
 			get { return _PositionDesc; }
 			set

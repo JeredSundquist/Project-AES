@@ -1,4 +1,5 @@
-﻿@model AES.Entities.Shared.Net45.Models.Position
+﻿@using System.Web.UI.WebControls
+@model AES.Entities.Shared.Net45.Models.Position
 
 @{
     ViewBag.Title = "Create";
@@ -31,21 +32,36 @@
             </div>
         </div>
 
-        @*<div class="form-group">
+        <div class="form-group">
             @Html.LabelFor(model => model.StoreId, "StoreId", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("StoreId", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.StoreId, "", new { @class = "text-danger" })
-            </div>
-        </div>*@
+                @{var listItems = new List<ListItem>
+                   {
+                        new ListItem {Text = "Super Awesome Store", Value = "1"},
+                       new ListItem {Text = "Ehh Store", Value = "2"},
+                       new ListItem {Text = "Best Buy", Value = "3"}
+                   };
+                }
+                @Html.DropDownList("StoreId", new SelectList(listItems, "Value", "Text"), htmlAttributes: new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.StoreId, "", new {@class = "text-danger"})
 
-        @*<div class="form-group">
-            @Html.LabelFor(model => model.TestId, "TestId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("TestId", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.TestId, "", new { @class = "text-danger" })
             </div>
-        </div>*@
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TestId, "TestId", htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @{ var listItemsAlso = new List<ListItem>
+                   {
+                       new ListItem {Text = "Super Awesome Test", Value = "10"},
+                       new ListItem {Text = "Ehh Test", Value = "11"},
+                       new ListItem {Text = "OIT Test", Value = "12"}
+                   };
+                }
+                @Html.DropDownList("TestId", new SelectList(listItemsAlso, "Value", "Text"), htmlAttributes: new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.TestId, "", new {@class = "text-danger"})
+            </div>
+        </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
