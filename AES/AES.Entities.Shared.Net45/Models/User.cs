@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -7,9 +18,12 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
+
     [Table("User")]
+
     public partial class User : EntityBase
     {
+
 		public int UserId
 		{ 
 			get { return _UserId; }
@@ -21,6 +35,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int _UserId;
+
 
 		public string UserName
 		{ 
@@ -34,6 +49,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _UserName;
 
+
 		public string password
 		{ 
 			get { return _password; }
@@ -45,6 +61,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _password;
+
 
 		public string email
 		{ 
@@ -58,16 +75,18 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _email;
 
-		public string address
+
+		public string Address
 		{ 
-			get { return _address; }
+			get { return _Address; }
 			set
 			{
-				if (Equals(value, _address)) return;
-				_address = value;
+				if (Equals(value, _Address)) return;
+				_Address = value;
 				NotifyPropertyChanged();
 			}
 		}
-		private string _address;
+		private string _Address;
+
     }
 }

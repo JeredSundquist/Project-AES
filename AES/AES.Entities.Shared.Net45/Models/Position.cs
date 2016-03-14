@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -7,17 +18,21 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
+
     [Table("Position")]
+
     public partial class Position : EntityBase
     {
+
         public Position()
         {
+
             AppliedPositions = new ChangeTrackingCollection<AppliedPosition>();
+
         }
 
-        [Display(Name = "Position Id")]
-        [Key]
-        public int PositionId
+
+		public int PositionId
 		{ 
 			get { return _PositionId; }
 			set
@@ -29,9 +44,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _PositionId;
 
+
         [Required]
-        [Display(Name = "Position")]
-        public string PositionName
+
+		public string PositionName
 		{ 
 			get { return _PositionName; }
 			set
@@ -43,9 +59,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _PositionName;
 
+
         [Required]
-        [Display(Name = "Description")]
-        public string PositionDesc
+
+		public string PositionDesc
 		{ 
 			get { return _PositionDesc; }
 			set
@@ -57,7 +74,8 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _PositionDesc;
 
-		public int StoreId
+
+		public int? StoreId
 		{ 
 			get { return _StoreId; }
 			set
@@ -67,9 +85,10 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private int _StoreId;
+		private int? _StoreId;
 
-		public int TestId
+
+		public int? TestId
 		{ 
 			get { return _TestId; }
 			set
@@ -79,7 +98,8 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private int _TestId;
+		private int? _TestId;
+
 
 		public ChangeTrackingCollection<AppliedPosition> AppliedPositions
 		{
@@ -92,6 +112,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private ChangeTrackingCollection<AppliedPosition> _AppliedPositions;
+
 
 
 		public Store Store
@@ -110,6 +131,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private ChangeTrackingCollection<Store> StoreChangeTracker { get; set; }
 
 
+
 		public Test Test
 		{
 			get { return _Test; }
@@ -124,5 +146,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private Test _Test;
 		private ChangeTrackingCollection<Test> TestChangeTracker { get; set; }
+
     }
 }

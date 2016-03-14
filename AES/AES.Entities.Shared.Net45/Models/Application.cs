@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -7,9 +18,12 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
+
     [Table("Application")]
+
     public partial class Application : EntityBase
     {
+
 		public int ApplicationId
 		{ 
 			get { return _ApplicationId; }
@@ -21,6 +35,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int _ApplicationId;
+
 
 		public string Name
 		{ 
@@ -34,6 +49,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Name;
 
+
 		public int? SSN
 		{ 
 			get { return _SSN; }
@@ -45,6 +61,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _SSN;
+
 
 		public string Address
 		{ 
@@ -58,6 +75,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Address;
 
+
 		public int? PhoneNumber
 		{ 
 			get { return _PhoneNumber; }
@@ -69,6 +87,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _PhoneNumber;
+
 
 		public string PositionsApplied
 		{ 
@@ -82,6 +101,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _PositionsApplied;
 
+
 		public decimal? SalaryExpectation
 		{ 
 			get { return _SalaryExpectation; }
@@ -93,6 +113,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private decimal? _SalaryExpectation;
+
 
 		public bool? FullTime
 		{ 
@@ -106,6 +127,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool? _FullTime;
 
+
 		public int? MondayAvailable
 		{ 
 			get { return _MondayAvailable; }
@@ -117,6 +139,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _MondayAvailable;
+
 
 		public int? TuesdayAvailable
 		{ 
@@ -130,6 +153,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _TuesdayAvailable;
 
+
 		public int? WednesdayAvailable
 		{ 
 			get { return _WednesdayAvailable; }
@@ -141,6 +165,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _WednesdayAvailable;
+
 
 		public int? ThursdayAvailable
 		{ 
@@ -154,6 +179,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _ThursdayAvailable;
 
+
 		public int? FridayAvailable
 		{ 
 			get { return _FridayAvailable; }
@@ -165,6 +191,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _FridayAvailable;
+
 
 		public int? SaturdayAvailable
 		{ 
@@ -178,6 +205,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _SaturdayAvailable;
 
+
 		public int? SundayAvailable
 		{ 
 			get { return _SundayAvailable; }
@@ -189,6 +217,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _SundayAvailable;
+
 
 		public int? MostRecentId
 		{ 
@@ -202,6 +231,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _MostRecentId;
 
+
 		public int? MiddleRecentId
 		{ 
 			get { return _MiddleRecentId; }
@@ -213,6 +243,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _MiddleRecentId;
+
 
 		public int? LeastRecentId
 		{ 
@@ -226,6 +257,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _LeastRecentId;
 
+
 		public int? RecentEducationId
 		{ 
 			get { return _RecentEducationId; }
@@ -237,6 +269,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _RecentEducationId;
+
 
 		public int? MiddleEducationId
 		{ 
@@ -250,6 +283,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _MiddleEducationId;
 
+
 		public int? LeastEducationId
 		{ 
 			get { return _LeastEducationId; }
@@ -261,6 +295,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _LeastEducationId;
+
 
 		public int? ReferenceId
 		{ 
@@ -274,6 +309,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _ReferenceId;
 
+
 		public DateTime? ApplicationDate
 		{ 
 			get { return _ApplicationDate; }
@@ -285,5 +321,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private DateTime? _ApplicationDate;
+
     }
 }

@@ -9,9 +9,9 @@ using WebApiRestService;
 
 namespace AES.WebApplication.Client
 {
-    public class TestSVCClient : WebApiClient<Test>
+    public class TestSvcClient : WebApiClient<Test>
     {
-        public static readonly WebApiClientOptions Options = new WebApiClientOptions()
+        public new static readonly WebApiClientOptions Options = new WebApiClientOptions()
         {
             BaseAddress = "http://localhost:" + "59095" + "/",
             ContentType = ContentType.Json,
@@ -22,7 +22,7 @@ namespace AES.WebApplication.Client
         /// <summary>
         /// Creates an instance of TestClient using default options
         /// </summary>
-        public TestSVCClient()
+        public TestSvcClient()
             : this(Options)
         {
         }
@@ -30,7 +30,7 @@ namespace AES.WebApplication.Client
         /// <summary>
         /// Creates an instance of TestClient using explicit options
         /// </summary>
-        private TestSVCClient(WebApiClientOptions options)
+        private TestSvcClient(WebApiClientOptions options)
             : base(options)
         {
         }

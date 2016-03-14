@@ -14,17 +14,17 @@ namespace AES.WebApplication.Controllers
 {
     public class TestController : Controller
     {
-        private readonly TestSVCClient _client = new TestSVCClient();
+        public TestSvcClient Client { get; }
 
         public TestController()
         {
-            _client = new TestSVCClient();
+            Client = new TestSvcClient();
         }
 
         // GET: Test
         public async Task<ActionResult> Index()
         {
-            IEnumerable<Test> tests = await _client.GetTests();
+            IEnumerable<Test> tests = await Client.GetTests();
 
             return View(tests);
         }
@@ -37,7 +37,7 @@ namespace AES.WebApplication.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Test test = await _client.GetTestById(id);
+            Test test = await Client.GetTestById(id);
 
             if (test == null)
             {
@@ -59,10 +59,9 @@ namespace AES.WebApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([Bind(Include = "TestId,QuestionList,passingScore")] Test test)
         {
-            if (ModelState.IsValid)
-                return View(test);
+            if (!ModelState.IsValid) return View(test);
 
-            await _client.CreateTest(test);
+            await Client.CreateTest(test);
 
             return RedirectToAction("Index");
         }
@@ -75,7 +74,7 @@ namespace AES.WebApplication.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Test test = await _client.GetTestById(id);
+            Test test = await Client.GetTestById(id);
 
             if (test == null)
             {
@@ -91,10 +90,12 @@ namespace AES.WebApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit([Bind(Include = "TestId,QuestionList,passingScore")] Test test)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+            {
                 return View(test);
+            }
 
-            await _client.EditTest(test);
+            await Client.EditTest(test);
 
             return RedirectToAction("Index");
         }
@@ -107,7 +108,7 @@ namespace AES.WebApplication.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Test test = await _client.GetTestById(id);
+            Test test = await Client.GetTestById(id);
 
             if (test == null)
             {
@@ -122,9 +123,9 @@ namespace AES.WebApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Test test = await _client.GetTestById(id);
+            Test test = await Client.GetTestById(id);
 
-            await _client.DeleteTest(id);
+            await Client.DeleteTest(id);
 
             return RedirectToAction("Index");
         }
@@ -133,7 +134,7 @@ namespace AES.WebApplication.Controllers
         {
             if (disposing)
             {
-                _client.Dispose();
+                Client.Dispose();
             }
             base.Dispose(disposing);
         }

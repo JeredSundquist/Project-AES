@@ -14,17 +14,17 @@ namespace AES.WebApplication.Controllers
 {
     public class StoreController : Controller
     {
-        private readonly StoreSvcClient _client = new StoreSvcClient();
+        public StoreSvcClient Client { get; }
 
         public StoreController()
         {
-            _client = new StoreSvcClient();
+            Client = new StoreSvcClient();
         }
 
         // GET: Store
         public async Task<ActionResult> Index()
         {
-            IEnumerable<Store> stores = await _client.GetStores();
+            IEnumerable<Store> stores = await Client.GetStores();
 
             return View(stores);
         }
@@ -37,7 +37,7 @@ namespace AES.WebApplication.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Store store = await _client.GetStoreById(id);
+            Store store = await Client.GetStoreById(id);
 
             if (store == null)
             {
@@ -61,7 +61,8 @@ namespace AES.WebApplication.Controllers
 
         {
             if (!ModelState.IsValid) return View(store);
-            await _client.CreateStore(store);
+
+            await Client.CreateStore(store);
 
             return RedirectToAction("Index");
         }
@@ -74,7 +75,7 @@ namespace AES.WebApplication.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Store store = await _client.GetStoreById(id);
+            Store store = await Client.GetStoreById(id);
 
             if (store == null)
             {
@@ -91,7 +92,8 @@ namespace AES.WebApplication.Controllers
         public async Task<ActionResult> Edit([Bind(Include = "StoreId,StoreLocation,StoreName")] Store store)
         {
             if (!ModelState.IsValid) return View(store);
-            await _client.EditStore(store);
+
+            await Client.EditStore(store);
 
             return RedirectToAction("Index");
         }
@@ -104,7 +106,7 @@ namespace AES.WebApplication.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Store store = await _client.GetStoreById(id);
+            Store store = await Client.GetStoreById(id);
 
             if (store == null)
             {
@@ -118,8 +120,8 @@ namespace AES.WebApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Store store = await _client.GetStoreById(id);
-            await _client.DeleteStore(id);
+            Store store = await Client.GetStoreById(id);
+            await Client.DeleteStore(id);
             return RedirectToAction("Index");
         }
 
@@ -127,7 +129,7 @@ namespace AES.WebApplication.Controllers
         {
             if (disposing)
             {
-                _client.Dispose();
+                Client.Dispose();
             }
             base.Dispose(disposing);
         }

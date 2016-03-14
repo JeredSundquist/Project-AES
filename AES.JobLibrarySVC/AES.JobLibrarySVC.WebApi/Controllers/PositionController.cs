@@ -25,6 +25,8 @@ namespace AES.JobLibrarySVC.WebApi.Controllers
         {
             IEnumerable<Position> entities = await _dbContext.Positions
                 // TODO: Add Includes for reference and/or collection properties
+                .Include(s => s.Store) //<=== REMOVE?
+                .Include(t => t.Test) //<=== REMOVE?
                 .ToListAsync();
 
             return Ok(entities);
@@ -36,6 +38,8 @@ namespace AES.JobLibrarySVC.WebApi.Controllers
         {
             Position entity = await _dbContext.Positions
                 // TODO: Add Includes for reference and/or collection properties
+                .Include(s => s.Store) //<=== REMOVE?
+                .Include(t => t.Test) //<=== REMOVE?
                 .SingleOrDefaultAsync(e => e.PositionId == id);
 
             if (entity == null)
