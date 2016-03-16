@@ -45,8 +45,20 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _QuestionList;
 
+        public string QuestionName
+        {
+            get { return _QuestionName; }
+            set
+            {
+                if (Equals(value, _QuestionName)) return;
+                _QuestionName = value;
+                NotifyPropertyChanged();
+            }
+        }
+        private string _QuestionName;
 
-		public int? passingScore
+
+        public int? passingScore
 		{ 
 			get { return _passingScore; }
 			set

@@ -57,7 +57,7 @@ namespace AES.WebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "TestId,QuestionList,passingScore")] Test test)
+        public async Task<ActionResult> Create([Bind(Include = "TestId,QuestionName,QuestionList,passingScore")] Test test)
         {
             if (!ModelState.IsValid) return View(test);
 
@@ -88,7 +88,7 @@ namespace AES.WebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "TestId,QuestionList,passingScore")] Test test)
+        public async Task<ActionResult> Edit([Bind(Include = "TestId,QuestionName,QuestionList,passingScore")] Test test)
         {
             if (!ModelState.IsValid)
             {

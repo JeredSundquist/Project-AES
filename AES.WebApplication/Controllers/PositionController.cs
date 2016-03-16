@@ -72,7 +72,7 @@ namespace AES.WebApplication.Controllers
             }
 
             var testQuestionList = new List<string>();
-            var testTitlesQuery = from t in tests select t.QuestionList;
+            var testTitlesQuery = from t in tests select t.QuestionName;
 
             testQuestionList.AddRange(testTitlesQuery);
             var testSelectList = new SelectList(testQuestionList);
