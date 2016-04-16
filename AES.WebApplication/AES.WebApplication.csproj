@@ -228,7 +228,6 @@
     <Compile Include="Client\TestSVCClient.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PositionController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
