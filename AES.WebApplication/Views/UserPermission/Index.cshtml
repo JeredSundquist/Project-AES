@@ -1,0 +1,75 @@
+﻿@model IEnumerable<AES.Entities.Shared.Net45.Models.UserPermission>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.editPosition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.requestPosition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.viewPosition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.editStore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.viewStore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.editTest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.viewTest)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.editPosition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.requestPosition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.viewPosition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.editStore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.viewStore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.editTest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.viewTest)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UserId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UserId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UserId })
+        </td>
+    </tr>
+}
+
+</table>
