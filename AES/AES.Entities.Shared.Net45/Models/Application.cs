@@ -153,7 +153,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private decimal? _SalaryExpectation;
 
 
-		public bool? FullTime
+		public bool FullTime
 		{ 
 			get { return _FullTime; }
 			set
@@ -163,10 +163,10 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private bool? _FullTime;
+		private bool _FullTime;
 
 
-		public bool? MondayAvailable
+		public bool MondayAvailable
 		{ 
 			get { return _MondayAvailable; }
 			set
@@ -176,10 +176,10 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private bool? _MondayAvailable;
+		private bool _MondayAvailable;
 
 
-		public bool? TuesdayAvailable
+		public bool TuesdayAvailable
 		{ 
 			get { return _TuesdayAvailable; }
 			set
@@ -189,10 +189,10 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private bool? _TuesdayAvailable;
+		private bool _TuesdayAvailable;
 
 
-		public bool? WednesdayAvailable
+		public bool WednesdayAvailable
 		{ 
 			get { return _WednesdayAvailable; }
 			set
@@ -202,10 +202,10 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private bool? _WednesdayAvailable;
+		private bool _WednesdayAvailable;
 
 
-		public bool? ThursdayAvailable
+		public bool ThursdayAvailable
 		{ 
 			get { return _ThursdayAvailable; }
 			set
@@ -215,10 +215,10 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private bool? _ThursdayAvailable;
+		private bool _ThursdayAvailable;
 
 
-		public bool? FridayAvailable
+		public bool FridayAvailable
 		{ 
 			get { return _FridayAvailable; }
 			set
@@ -228,10 +228,10 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private bool? _FridayAvailable;
+		private bool _FridayAvailable;
 
 
-		public bool? SaturdayAvailable
+		public bool SaturdayAvailable
 		{ 
 			get { return _SaturdayAvailable; }
 			set
@@ -241,10 +241,10 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private bool? _SaturdayAvailable;
+		private bool _SaturdayAvailable;
 
 
-		public bool? SundayAvailable
+		public bool SundayAvailable
 		{ 
 			get { return _SundayAvailable; }
 			set
@@ -254,7 +254,7 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private bool? _SundayAvailable;
+		private bool _SundayAvailable;
 
 
         [StringLength(50)]
@@ -770,7 +770,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _MostRecentEducationYearsAttended;
 
 
-		public bool? MostRecentEducationGraduated
+		public bool MostRecentEducationGraduated
 		{ 
 			get { return _MostRecentEducationGraduated; }
 			set
@@ -780,7 +780,7 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private bool? _MostRecentEducationGraduated;
+		private bool _MostRecentEducationGraduated;
 
 
         [StringLength(30)]
@@ -828,7 +828,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _MiddleRecentEducationYearsAttended;
 
 
-		public bool? MiddleRecentEducationGraduated
+		public bool MiddleRecentEducationGraduated
 		{ 
 			get { return _MiddleRecentEducationGraduated; }
 			set
@@ -838,7 +838,7 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private bool? _MiddleRecentEducationGraduated;
+		private bool _MiddleRecentEducationGraduated;
 
 
         [StringLength(30)]
@@ -886,7 +886,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _LeastRecentEducationYearsAttended;
 
 
-		public bool? LeastRecentEducationGraduated
+		public bool LeastRecentEducationGraduated
 		{ 
 			get { return _LeastRecentEducationGraduated; }
 			set
@@ -896,7 +896,7 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private bool? _LeastRecentEducationGraduated;
+		private bool _LeastRecentEducationGraduated;
 
 
         [StringLength(30)]
