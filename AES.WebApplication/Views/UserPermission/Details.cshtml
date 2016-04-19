@@ -1,0 +1,82 @@
+﻿@model AES.Entities.Shared.Net45.Models.UserPermission
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserPermission</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.editPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.editPosition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.requestPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.requestPosition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.viewPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.viewPosition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.editStore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.editStore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.viewStore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.viewStore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.editTest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.editTest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.viewTest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.viewTest)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

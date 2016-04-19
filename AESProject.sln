@@ -14,6 +14,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.JobLibrarySVC.WebApi", "AES.JobLibrarySVC\AES.JobLibrarySVC.WebApi\AES.JobLibrarySVC.WebApi.csproj", "{A38F066A-EF46-48DC-A004-F95352E751E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.WebApplication", "AES.WebApplication\AES.WebApplication.csproj", "{438D7886-D373-4F48-AD2C-2D03ED039D28}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A38F066A-EF46-48DC-A004-F95352E751E2} = {A38F066A-EF46-48DC-A004-F95352E751E2}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
