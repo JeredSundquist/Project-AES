@@ -1,0 +1,50 @@
+﻿@model AES.Entities.Shared.Net45.Models.Position
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Position</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Store.StoreLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Store.StoreLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Test.QuestionList)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Test.QuestionList)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionDesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.PositionId }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>
