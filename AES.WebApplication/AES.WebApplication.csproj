@@ -228,8 +228,10 @@
     <Compile Include="Client\TestSVCClient.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PositionController.cs" />
+    <Compile Include="Controllers\PositionRequestController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -254,8 +256,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="Scripts\ai.0.22.9-build00167.js" />
-    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -267,12 +267,9 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-2.2.1.js" />
-    <Content Include="Scripts\jquery-2.2.1.min.js" />
-    <None Include="Scripts\jquery-2.2.3-vsdoc.js" />
+    <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.3.js" />
     <Content Include="Scripts\jquery-2.2.3.min.js" />
-    <Content Include="Scripts\jquery-2.2.3.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -285,6 +282,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -319,7 +317,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Scripts\jquery-2.2.1.min.map" />
     <Content Include="Views\Store\Create.cshtml" />
     <Content Include="Views\Store\Delete.cshtml" />
     <Content Include="Views\Store\Details.cshtml" />
@@ -350,6 +347,12 @@
     <Content Include="Views\UserPermission\Details.cshtml" />
     <Content Include="Views\UserPermission\Edit.cshtml" />
     <Content Include="Views\UserPermission\Index.cshtml" />
+    <Content Include="Scripts\jquery-2.2.3.min.map" />
+    <Content Include="Views\PositionRequest\Create.cshtml" />
+    <Content Include="Views\PositionRequest\Delete.cshtml" />
+    <Content Include="Views\PositionRequest\Details.cshtml" />
+    <Content Include="Views\PositionRequest\Edit.cshtml" />
+    <Content Include="Views\PositionRequest\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -385,7 +388,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59701</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:59701/</IISUrl>
+          <IISUrl>http://localhost:59701</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
