@@ -1,0 +1,98 @@
+﻿@model AES.Entities.Shared.Net45.Models.PositionRequest
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PositionRequest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedByName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestedByName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestReason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestReason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateRequested)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateRequested)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestApproved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestApproved)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApproveBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApproveBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApprovedByName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApprovedByName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateApproved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateApproved)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RequestId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

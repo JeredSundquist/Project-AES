@@ -185,6 +185,7 @@
     <Compile Include="Controllers\HomeApiController.cs" />
     <Compile Include="Controllers\PermissionController.cs" />
     <Compile Include="Controllers\PositionController.cs" />
+    <Compile Include="Controllers\PositionRequestController.cs" />
     <Compile Include="Controllers\QuestionController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\TestController.cs" />

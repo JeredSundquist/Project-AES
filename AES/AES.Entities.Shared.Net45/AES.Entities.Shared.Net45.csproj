@@ -75,6 +75,7 @@
     <Compile Include="Models\Education.cs" />
     <Compile Include="Models\JobHistory.cs" />
     <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\PositionRequest.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Reference.cs" />
     <Compile Include="Models\Store.cs" />

@@ -136,6 +136,54 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _FullTime;
 
+		public bool PartTime
+		{ 
+			get { return _PartTime; }
+			set
+			{
+				if (Equals(value, _PartTime)) return;
+				_PartTime = value;
+				NotifyPropertyChanged();
+			}
+		}
+		private bool _PartTime;
+
+		public bool Days
+		{ 
+			get { return _Days; }
+			set
+			{
+				if (Equals(value, _Days)) return;
+				_Days = value;
+				NotifyPropertyChanged();
+			}
+		}
+		private bool _Days;
+
+		public bool Evenings
+		{ 
+			get { return _Evenings; }
+			set
+			{
+				if (Equals(value, _Evenings)) return;
+				_Evenings = value;
+				NotifyPropertyChanged();
+			}
+		}
+		private bool _Evenings;
+
+		public bool Weekends
+		{ 
+			get { return _Weekends; }
+			set
+			{
+				if (Equals(value, _Weekends)) return;
+				_Weekends = value;
+				NotifyPropertyChanged();
+			}
+		}
+		private bool _Weekends;
+
 		public bool MondayAvailable
 		{ 
 			get { return _MondayAvailable; }

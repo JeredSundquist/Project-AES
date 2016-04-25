@@ -231,6 +231,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PositionController.cs" />
+    <Compile Include="Controllers\PositionRequestController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -281,6 +282,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -346,6 +348,11 @@
     <Content Include="Views\UserPermission\Edit.cshtml" />
     <Content Include="Views\UserPermission\Index.cshtml" />
     <Content Include="Scripts\jquery-2.2.3.min.map" />
+    <Content Include="Views\PositionRequest\Create.cshtml" />
+    <Content Include="Views\PositionRequest\Delete.cshtml" />
+    <Content Include="Views\PositionRequest\Details.cshtml" />
+    <Content Include="Views\PositionRequest\Edit.cshtml" />
+    <Content Include="Views\PositionRequest\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -25,6 +25,7 @@ namespace AES.Entities.Shared.Net45.Models
         public DbSet<Education> Educations { get; set; }
         public DbSet<JobHistory> JobHistories { get; set; }
         public DbSet<Position> Positions { get; set; }
+        public DbSet<PositionRequest> PositionRequests { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Reference> References { get; set; }
         public DbSet<Store> Stores { get; set; }
