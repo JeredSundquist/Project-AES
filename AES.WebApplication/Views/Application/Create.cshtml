@@ -78,12 +78,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-10">
                         @Html.LabelFor(model => model.FullTime, "Full Time?", htmlAttributes: new { @class = "text-left col-lg-2" })
-                        @Html.LabelFor(model => model.FullTime, "Part Time?", htmlAttributes: new { @class = "text-left col-lg-2" })     <!--Place holder-->
-                        @Html.LabelFor(model => model.MondayAvailable, "Days?", htmlAttributes: new { @class = "text-left col-lg-2" })   <!--Place holder-->
-                        @Html.LabelFor(model => model.MondayAvailable, "Eves?", htmlAttributes: new { @class = "text-left col-lg-2" })   <!--Place holder-->
-                        @Html.LabelFor(model => model.MondayAvailable, "WkEnds?", htmlAttributes: new { @class = "text-left col-lg-2" }) <!--Place holder-->
+                        @Html.LabelFor(model => model.PartTime, "Part Time?", htmlAttributes: new { @class = "text-left col-lg-2" })
+                        @Html.LabelFor(model => model.Days, "Days?", htmlAttributes: new { @class = "text-left col-lg-2" })
+                        @Html.LabelFor(model => model.Evenings, "Eves?", htmlAttributes: new { @class = "text-left col-lg-2" })
+                        @Html.LabelFor(model => model.Weekends, "WkEnds?", htmlAttributes: new { @class = "text-left col-lg-2" })
                     </div>
                 </div>
                 <div class="row">
@@ -95,37 +95,39 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="checkbox">
-                            @Html.EditorFor(model => model.FullTime)
-                            @Html.ValidationMessageFor(model => model.FullTime, "", new { @class = "text-danger" })
+                            @Html.EditorFor(model => model.PartTime)
+                            @Html.ValidationMessageFor(model => model.PartTime, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="checkbox">
-                            @Html.EditorFor(model => model.FullTime)
-                            @Html.ValidationMessageFor(model => model.FullTime, "", new { @class = "text-danger" })
+                            @Html.EditorFor(model => model.Days)
+                            @Html.ValidationMessageFor(model => model.Days, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="checkbox">
-                            @Html.EditorFor(model => model.FullTime)
-                            @Html.ValidationMessageFor(model => model.FullTime, "", new { @class = "text-danger" })
+                            @Html.EditorFor(model => model.Evenings)
+                            @Html.ValidationMessageFor(model => model.Evenings, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="checkbox">
-                            @Html.EditorFor(model => model.FullTime)
-                            @Html.ValidationMessageFor(model => model.FullTime, "", new { @class = "text-danger" })
+                            @Html.EditorFor(model => model.Weekends)
+                            @Html.ValidationMessageFor(model => model.Weekends, "", new { @class = "text-danger" })
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    @Html.LabelFor(model => model.MondayAvailable, "Mon?", htmlAttributes: new { @class = "text-left col-lg-1" })
-                    @Html.LabelFor(model => model.TuesdayAvailable, "Tues?", htmlAttributes: new { @class = "text-left col-lg-1" })
-                    @Html.LabelFor(model => model.WednesdayAvailable, "Wed?", htmlAttributes: new { @class = "text-left col-lg-1" })
-                    @Html.LabelFor(model => model.ThursdayAvailable, "Thur?", htmlAttributes: new { @class = "text-left col-lg-1" })
-                    @Html.LabelFor(model => model.FridayAvailable, "Fri?", htmlAttributes: new { @class = "text-left col-lg-1" })
-                    @Html.LabelFor(model => model.SaturdayAvailable, "Sat?", htmlAttributes: new { @class = "text-left col-lg-1" })
-                    @Html.LabelFor(model => model.SundayAvailable, "Sun?", htmlAttributes: new { @class = "text-left col-lg-1" })
+                    <div class="col-lg-7">
+                        @Html.LabelFor(model => model.MondayAvailable, "Mon?", htmlAttributes: new { @class = "text-left col-lg-1" })
+                        @Html.LabelFor(model => model.TuesdayAvailable, "Tues?", htmlAttributes: new { @class = "text-left col-lg-1" })
+                        @Html.LabelFor(model => model.WednesdayAvailable, "Wed?", htmlAttributes: new { @class = "text-left col-lg-1" })
+                        @Html.LabelFor(model => model.ThursdayAvailable, "Thur?", htmlAttributes: new { @class = "text-left col-lg-1" })
+                        @Html.LabelFor(model => model.FridayAvailable, "Fri?", htmlAttributes: new { @class = "text-left col-lg-1" })
+                        @Html.LabelFor(model => model.SaturdayAvailable, "Sat?", htmlAttributes: new { @class = "text-left col-lg-1" })
+                        @Html.LabelFor(model => model.SundayAvailable, "Sun?", htmlAttributes: new { @class = "text-left col-lg-1" })
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-1">
@@ -363,8 +365,8 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.MostRecentEducationName, "Most recent: - Name and address of school:", htmlAttributes: new { @class = "text-left col-lg-7" })
                 @Html.LabelFor(model => model.MostRecentEducationYearsAttended, "Years attended:", htmlAttributes: new { @class = "text-left col-lg-2" })
-                @Html.LabelFor(model => model.MostRecentEducationGraduated, "Grad(y/n):", htmlAttributes: new { @class = "text-left col-lg-1" })
                 @Html.LabelFor(model => model.MostRecentEducationDegreeMajor, "Degree/major:", htmlAttributes: new { @class = "text-left col-lg-2" })
+                @Html.LabelFor(model => model.MostRecentEducationGraduated, "Grad(y/n):", htmlAttributes: new { @class = "text-left col-lg-1" })
 
                 <div class="col-lg-7">
                     @Html.EditorFor(model => model.MostRecentEducationName, new { htmlAttributes = new { @class = "form-control" } })
@@ -374,21 +376,21 @@
                     @Html.EditorFor(model => model.MostRecentEducationYearsAttended, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.MostRecentEducationYearsAttended, "", new { @class = "text-danger" })
                 </div>
+                <div class="col-lg-2">
+                    @Html.EditorFor(model => model.MostRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MostRecentEducationDegreeMajor, "", new { @class = "text-danger" })
+                </div>
                 <div class="col-lg-1">
                     <div class="checkbox">
                         @Html.EditorFor(model => model.MostRecentEducationGraduated)
                         @Html.ValidationMessageFor(model => model.MostRecentEducationGraduated, "", new { @class = "text-danger" })
                     </div>
                 </div>
-                <div class="col-lg-2">
-                    @Html.EditorFor(model => model.MostRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.MostRecentEducationDegreeMajor, "", new { @class = "text-danger" })
-                </div>
 
                 @Html.LabelFor(model => model.MiddleRecentEducationName, "Next recent:", htmlAttributes: new { @class = "text-left col-lg-7" })
                 @Html.LabelFor(model => model.MiddleRecentEducationYearsAttended, "Years attended:", htmlAttributes: new { @class = "text-left col-lg-2" })
-                @Html.LabelFor(model => model.MiddleRecentEducationGraduated, "Grad(y/n):", htmlAttributes: new { @class = "text-left col-lg-1" })
                 @Html.LabelFor(model => model.MiddleRecentEducationDegreeMajor, "Degree/major:", htmlAttributes: new { @class = "text-left col-lg-2" })
+                @Html.LabelFor(model => model.MiddleRecentEducationGraduated, "Grad(y/n):", htmlAttributes: new { @class = "text-left col-lg-1" })
 
                 <div class="col-lg-7">
                     @Html.EditorFor(model => model.MiddleRecentEducationName, new { htmlAttributes = new { @class = "form-control" } })
@@ -398,21 +400,22 @@
                     @Html.EditorFor(model => model.MiddleRecentEducationYearsAttended, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.MiddleRecentEducationYearsAttended, "", new { @class = "text-danger" })
                 </div>
+                <div class="col-lg-2">
+                    @Html.EditorFor(model => model.MiddleRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MiddleRecentEducationDegreeMajor, "", new { @class = "text-danger" })
+                </div>
                 <div class="col-lg-1">
                     <div class="checkbox">
                         @Html.EditorFor(model => model.MiddleRecentEducationGraduated)
                         @Html.ValidationMessageFor(model => model.MiddleRecentEducationGraduated, "", new { @class = "text-danger" })
                     </div>
                 </div>
-                <div class="col-lg-2">
-                    @Html.EditorFor(model => model.MiddleRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.MiddleRecentEducationDegreeMajor, "", new { @class = "text-danger" })
-                </div>
+
 
                 @Html.LabelFor(model => model.LeastRecentEducationName, "Least recent:", htmlAttributes: new { @class = "text-left col-lg-7" })
                 @Html.LabelFor(model => model.LeastRecentEducationYearsAttended, "Years attended:", htmlAttributes: new { @class = "text-left col-lg-2" })
-                @Html.LabelFor(model => model.LeastRecentEducationGraduated, "Grad(y/n):", htmlAttributes: new { @class = "text-left col-lg-1" })
                 @Html.LabelFor(model => model.LeastRecentEducationDegreeMajor, "Degree/major:", htmlAttributes: new { @class = "text-left col-lg-2" })
+                @Html.LabelFor(model => model.LeastRecentEducationGraduated, "Grad(y/n):", htmlAttributes: new { @class = "text-left col-lg-1" })
 
                 <div class="col-lg-7">
                     @Html.EditorFor(model => model.LeastRecentEducationName, new { htmlAttributes = new { @class = "form-control" } })
@@ -422,15 +425,15 @@
                     @Html.EditorFor(model => model.LeastRecentEducationYearsAttended, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.LeastRecentEducationYearsAttended, "", new { @class = "text-danger" })
                 </div>
+                <div class="col-lg-2">
+                    @Html.EditorFor(model => model.LeastRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LeastRecentEducationDegreeMajor, "", new { @class = "text-danger" })
+                </div>
                 <div class="col-lg-1">
                     <div class="checkbox">
                         @Html.EditorFor(model => model.LeastRecentEducationGraduated)
                         @Html.ValidationMessageFor(model => model.LeastRecentEducationGraduated, "", new { @class = "text-danger" })
                     </div>
-                </div>
-                <div class="col-lg-2">
-                    @Html.EditorFor(model => model.LeastRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.LeastRecentEducationDegreeMajor, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -509,34 +512,36 @@
             </div>
         </div>
         <div class="col-lg-12 well" style="border: 1px solid blue">
+
             <div class="row">
                 <div class="col-lg-4 well text-center" style="border: 1px solid blue; color: blue; font-size:22px">
                     Pre-Employment Statement:
                 </div>
             </div>
-            <div class="form-group">
-                <div class="row">
-                    <strong>@Html.Label("    By pressing the \"Apply\" button below, I hereby affirm that the information given by me on this application for employment is complete and accurate.")</strong>
-                    <strong>@Html.Label("    I understand that any omission of falsificaton of information will be immediate grounds for dismissal.")</strong>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <strong><label>    By pressing the \"Apply\" button below, I hereby affirm that the information given by me on this application for employment is complete and accurate.</label></strong>
+                    <strong><label>    I understand that any omission of falsificaton of information will be immediate grounds for dismissal.</label></strong>
+                    <p></p>
                 </div>
-                <div class="row">
-                    <div class="col-lg-2">
-                        <input type="submit" value="Apply" class="btn btn-default" />
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-1">
+                    <button type="submit" class="btn btn-primary btn-lg"><strong>Apply</strong></button>
                 </div>
-                <div class="row"></div>
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.Label("")
-    @Html.ActionLink("Back to List", "Index")
-</div>
+    <div>
+        @Html.Label("")
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
 

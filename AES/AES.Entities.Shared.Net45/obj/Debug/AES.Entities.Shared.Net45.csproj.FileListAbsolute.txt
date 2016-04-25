@@ -16,24 +16,6 @@ C:\Users\Jered\Documents\GitHub\Project-AES\AES\AES.Entities.Shared.Net45\bin\De
 C:\Users\Jered\Documents\GitHub\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.csprojResolveAssemblyReference.cache
 C:\Users\Jered\Documents\GitHub\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.dll
 C:\Users\Jered\Documents\GitHub\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.pdb
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\AES.Entities.Shared.Net45.dll.config
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\AES.Entities.Shared.Net45.dll
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\AES.Entities.Shared.Net45.pdb
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\EntityFramework.dll
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.Client.dll
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.Common.dll
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.EF.6.dll
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\EntityFramework.xml
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.Client.xml
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.Common.xml
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.EF.6.xml
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.csprojResolveAssemblyReference.cache
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.dll
-C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.pdb
 C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Proj-AES\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\AES.Entities.Shared.Net45.dll.config
 C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Proj-AES\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\AES.Entities.Shared.Net45.dll
 C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Proj-AES\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\AES.Entities.Shared.Net45.pdb
@@ -52,3 +34,21 @@ C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Proj-AES\Projec
 C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Proj-AES\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.csprojResolveAssemblyReference.cache
 C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Proj-AES\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.dll
 C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Proj-AES\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.pdb
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\AES.Entities.Shared.Net45.dll.config
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\AES.Entities.Shared.Net45.dll
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\AES.Entities.Shared.Net45.pdb
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\EntityFramework.dll
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.Client.dll
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.Common.dll
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.EF.6.dll
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\EntityFramework.xml
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.Client.xml
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.Common.xml
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.EF.6.xml
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.csprojResolveAssemblyReference.cache
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.dll
+C:\Users\Dave\Desktop\Programming\VisualStudios-CST326-336\JuniorProject\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.pdb
