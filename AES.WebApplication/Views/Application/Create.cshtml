@@ -22,7 +22,7 @@
                 @Html.LabelFor(model => model.Name, "Name:", htmlAttributes: new { @class = "text-left col-lg-7" })
                 @Html.LabelFor(model => model.SSN, "Social Security Number:", htmlAttributes: new { @class = "text-left col-lg-5" })
                 <div class="col-lg-7">
-                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "First, Middle, Last" } })
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "First, Middle, Last" } })
                     @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-5">
@@ -30,8 +30,9 @@
                         http://www.codeproject.com/Articles/651609/Validating-Social-Security-Numbers-through-Regular
                         must use \\ for escape characters
                     *@
-                    @Html.EditorFor(model => model.SSN, new { htmlAttributes = new { @class = "form-control", placeholder = " ### - ## - #### ",
-                     pattern = "^(?!219-09-9999|078-05-1120)(?!666|000|\\d{2})\\d{3}-(?!00)\\d{2}-(?!0{4})\\d{4}$"} })
+                    @*@Html.EditorFor(model => model.SSN, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = " ### - ## - #### ",
+    pattern = "^(?!219-09-9999|078-05-1120)(?!666|000|\\d{2})\\d{3}-(?!00)\\d{2}-(?!0{4})\\d{4}$" } })*@
+                    @Html.EditorFor(model => model.SSN, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = " ### - ## - #### "} })
                     @Html.ValidationMessageFor(model => model.SSN, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -40,11 +41,12 @@
                 @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "text-left col-lg-5" })
 
                 <div class="col-lg-7">
-                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", placeholder = "Street, City, State, Zip" } })
+                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "Street, City, State, Zip" } })
                     @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-5">
-                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", type = "tel", id = "tel", placeholder = " ### - ### - #### " } })
+                    @*@Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", required = "required", type = "tel", id = "tel", placeholder = " ### - ### - #### " } })*@
+                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = " ### - ### - #### " } })
                     @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
                 </div>
 
@@ -56,7 +58,8 @@
                     @Html.ValidationMessageFor(model => model.OtherName, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-5">
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", required = "required", type = "email", id = "email", placeholder = "Enter email address" } })
+                    @*@Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", required = "required", type = "email", id = "email", placeholder = "Enter email address" } })*@
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "Enter email address" } })
                     @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -118,7 +121,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3">
-                        @Html.EditorFor(model => model.SalaryExpectation, new { htmlAttributes = new { @class = "form-control", placeholder = "Expected Salary" } })
+                        @Html.EditorFor(model => model.SalaryExpectation, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "Expected Salary" } })
                         @Html.ValidationMessageFor(model => model.SalaryExpectation, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2 col-lg-offset-1">
@@ -157,15 +160,16 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-2 col-lg-offset-4">
+                    @*<div class="col-lg-2 col-lg-offset-4">
                         <div class="checkbox">
                             <label>
                                 @Html.CheckBoxFor(model => model.Weekends) Weekends
                             </label>
                             @Html.ValidationMessageFor(model => model.Weekends, "", new { @class = "text-danger" })
                         </div>
-                    </div>
-                    <div class="col-lg-2">
+                    </div>*@
+                    <div class="col-lg-2 col-lg-offset-6">
+                    @*<div class="col-lg-2">*@
                         <div class="checkbox">
                             <label>
                                 @Html.CheckBoxFor(model => model.SaturdayAvailable) Saturday
@@ -192,7 +196,7 @@
             </div>
             <div class="form-group">
                 <fieldset class="well the-fieldset">
-                    <legend class="the-legend">Most Recent</legend>
+                    <legend class="the-legend"><span>Most Recent</span></legend>
                     @Html.LabelFor(model => model.MostRecentEmployerName, "Employer Name:", htmlAttributes: new { @class = "text-left col-lg-8" })
                     @Html.LabelFor(model => model.MostRecentEmployerFromDate, "From:", htmlAttributes: new { @class = "text-left col-lg-2" })
                     @Html.LabelFor(model => model.MostRecentEmployerToDate, "To:", htmlAttributes: new { @class = "text-left col-lg-2" })
@@ -201,11 +205,11 @@
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerName, "", new { @class = "help-inline" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MostRecentEmployerFromDate, new { htmlAttributes = new { @class = "form-control", placeholder = "(month/year)" } })
+                        @Html.EditorFor(model => model.MostRecentEmployerFromDate, new { htmlAttributes = new { @class = "form-control", placeholder = "MM / YYYY" } })
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerFromDate, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MostRecentEmployerToDate, new { htmlAttributes = new { @class = "form-control", placeholder = "(month/year)" } })
+                        @Html.EditorFor(model => model.MostRecentEmployerToDate, new { htmlAttributes = new { @class = "form-control", placeholder = "MM / YYYY" } })
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerToDate, "", new { @class = "help-inline" })
                     </div>
                     @Html.LabelFor(model => model.MostRecentEmployerAddress, "Address:", htmlAttributes: new { @class = "control-label col-lg-8" })
@@ -216,7 +220,8 @@
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerAddress, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MostRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
+                        @*@Html.EditorFor(model => model.MostRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })*@                      
+                        @Html.EditorFor(model => model.MostRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control", placeholder = "### - ### - ####" } })
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerPhone, "", new { @class = "text-danger tel" })
                     </div>
                     <div class="col-lg-2">
@@ -261,11 +266,11 @@
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerName, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerFromDate, new { htmlAttributes = new { @class = "form-control date", placeholder = "(month/year)" } })
+                        @Html.EditorFor(model => model.MiddleRecentEmployerFromDate, new { htmlAttributes = new { @class = "form-control", placeholder = "MM / YYYY" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerFromDate, "", new { @class = "text-danger date" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerToDate, new { htmlAttributes = new { @class = "form-control date", placeholder = "(month/year)" } })
+                        @Html.EditorFor(model => model.MiddleRecentEmployerToDate, new { htmlAttributes = new { @class = "form-control", placeholder = "MM / YYYY" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerToDate, "", new { @class = "text-danger date" })
                     </div>
                     @Html.LabelFor(model => model.MiddleRecentEmployerAddress, "Address:", htmlAttributes: new { @class = "control-label col-lg-8" })
@@ -276,7 +281,8 @@
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerAddress, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
+                        @*@Html.EditorFor(model => model.MiddleRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })*@
+                        @Html.EditorFor(model => model.MiddleRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control", placeholder = "### - ### - ####" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerPhone, "", new { @class = "text-danger tel" })
                     </div>
                     <div class="col-lg-2">
@@ -319,11 +325,11 @@
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerName, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.LeastRecentEmployerFromDate, new { htmlAttributes = new { @class = "form-control date", placeholder = "(month/year)" } })
+                        @Html.EditorFor(model => model.LeastRecentEmployerFromDate, new { htmlAttributes = new { @class = "form-control", placeholder = "MM / YYYY" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerFromDate, "", new { @class = "text-danger date" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.LeastRecentEmployerToDate, new { htmlAttributes = new { @class = "form-control date", placeholder = "(month/year)" } })
+                        @Html.EditorFor(model => model.LeastRecentEmployerToDate, new { htmlAttributes = new { @class = "form-control", placeholder = "MM / YYYY" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerToDate, "", new { @class = "text-danger date" })
                     </div>
                     @Html.LabelFor(model => model.LeastRecentEmployerAddress, "Address:", htmlAttributes: new { @class = "control-label col-lg-8" })
@@ -334,7 +340,8 @@
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerAddress, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.LeastRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
+                        @*@Html.EditorFor(model => model.LeastRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })*@
+                        @Html.EditorFor(model => model.LeastRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control", placeholder = "### - ### - ####" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerPhone, "", new { @class = "text-danger tel" })
                     </div>
                     <div class="col-lg-2">
@@ -361,7 +368,7 @@
                         @Html.EditorFor(model => model.LeastRecentEmployerReasonForLeaving, new { htmlAttributes = new { @class = "form-control", placeholder = "Reason for Leaving" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerReasonForLeaving, "", new { @class = "text-danger" })
                     </div>
-                    @Html.LabelFor(model => model.LeastRecentEmployerResponsibilities, "Describe your responsibilities:", htmlAttributes: new { @class = "text-left" })
+                    @Html.LabelFor(model => model.LeastRecentEmployerResponsibilities, "Describe your responsibilities:", htmlAttributes: new { @class = "text-left col-lg-12" })
                     <div class="col-lg-12">
                         @Html.EditorFor(model => model.LeastRecentEmployerResponsibilities, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Responsibilities" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerResponsibilities, "", new { @class = "text-danger col-lg-12" })
@@ -465,11 +472,12 @@
                 @Html.LabelFor(model => model.Reference1Title, "Title:", htmlAttributes: new { @class = "text-left col-lg-2" })
 
                 <div class="col-lg-6">
-                    @Html.EditorFor(model => model.Reference1Name, new { htmlAttributes = new { @class = "form-control", placeholder = "First, Last" } })
+                    @Html.EditorFor(model => model.Reference1Name, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "First, Last" } })
                     @Html.ValidationMessageFor(model => model.Reference1Name, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference1Phone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
+                    @*@Html.EditorFor(model => model.Reference1Phone, new { htmlAttributes = new { @class = "form-control tel", required = "required", placeholder = "### - ### - ####" } })*@
+                    @Html.EditorFor(model => model.Reference1Phone, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "### - ### - ####" } })
                     @Html.ValidationMessageFor(model => model.Reference1Phone, "", new { @class = "text-danger tel" })
                 </div>
                 <div class="col-lg-2">
@@ -487,11 +495,12 @@
                 @Html.LabelFor(model => model.Reference2Title, "Title:", htmlAttributes: new { @class = "text-left col-lg-2" })
 
                 <div class="col-lg-6">
-                    @Html.EditorFor(model => model.Reference2Name, new { htmlAttributes = new { @class = "form-control", placeholder = "First, Last" } })
+                    @Html.EditorFor(model => model.Reference2Name, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "First, Last" } })
                     @Html.ValidationMessageFor(model => model.Reference1Name, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference2Phone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
+                    @*@Html.EditorFor(model => model.Reference2Phone, new { htmlAttributes = new { @class = "form-control tel", required = "required", placeholder = "### - ### - ####" } })*@
+                    @Html.EditorFor(model => model.Reference2Phone, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "### - ### - ####" } })
                     @Html.ValidationMessageFor(model => model.Reference1Phone, "", new { @class = "text-danger tel" })
                 </div>
                 <div class="col-lg-2">
@@ -509,11 +518,12 @@
                 @Html.LabelFor(model => model.Reference3Title, "Title:", htmlAttributes: new { @class = "text-left col-lg-2" })
 
                 <div class="col-lg-6">
-                    @Html.EditorFor(model => model.Reference3Name, new { htmlAttributes = new { @class = "form-control", placeholder = "First, Last" } })
+                    @Html.EditorFor(model => model.Reference3Name, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "First, Last" } })
                     @Html.ValidationMessageFor(model => model.Reference3Name, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference3Phone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
+                    @*@Html.EditorFor(model => model.Reference3Phone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })*@
+                    @Html.EditorFor(model => model.Reference3Phone, new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "### - ### - ####" } })
                     @Html.ValidationMessageFor(model => model.Reference3Phone, "", new { @class = "text-danger tel" })
                 </div>
                 <div class="col-lg-2">

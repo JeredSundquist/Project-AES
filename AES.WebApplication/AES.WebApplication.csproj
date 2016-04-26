@@ -222,6 +222,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Client\AnswerSVCClient.cs" />
     <Compile Include="Client\ApplicationSVCClient.cs" />
+    <Compile Include="Client\PositionRequestSVCClient.cs" />
     <Compile Include="Client\PositionSVCClient.cs" />
     <Compile Include="Client\QuestionSVCClient.cs" />
     <Compile Include="Client\StoreSVCClient.cs" />
