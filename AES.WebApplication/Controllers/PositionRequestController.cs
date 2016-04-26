@@ -7,27 +7,39 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AES.Entities.Shared.Net45.Models;
+using AES.WebApplication.Client;
+using System.Threading.Tasks;
 
 namespace AES.WebApplication.Controllers
 {
     public class PositionRequestController : Controller
     {
-        private AESEntitiesModel db = new AESEntitiesModel();
+        public PositionRequestSvcClient Client { get; }
+        
+        //constructor
+        public PositionRequestController()
+        {
+            Client = new PositionRequestSvcClient();
+        }
 
         // GET: PositionRequest
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View(db.PositionRequests.ToList());
+            IEnumerable<PositionRequest> positionRequests = await Client.GetPositionRequests();
+
+            return View(positionRequests);
         }
 
         // GET: PositionRequest/Details/5
-        public ActionResult Details(int? id)
+        public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PositionRequest positionRequest = db.PositionRequests.Find(id);
+
+            PositionRequest positionRequest = await Client.GetPositionRequestById(id);
+
             if (positionRequest == null)
             {
                 return HttpNotFound();
@@ -46,26 +58,26 @@ namespace AES.WebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RequestId,RequestedBy,RequestedByName,PositionName,StoreId,RequestReason,DateRequested,RequestApproved,ApproveBy,ApprovedByName,DateApproved")] PositionRequest positionRequest)
+        public async Task<ActionResult> Create([Bind(Include = "RequestId,RequestedBy,RequestedByName,PositionName,StoreId,RequestReason,DateRequested,RequestApproved,ApproveBy,ApprovedByName,DateApproved")] PositionRequest positionRequest)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid) return View(positionRequest);
             {
-                db.PositionRequests.Add(positionRequest);
-                db.SaveChanges();
+                await Client.CreatePositionRequest(positionRequest);
+
                 return RedirectToAction("Index");
             }
-
-            return View(positionRequest);
         }
 
         // GET: PositionRequest/Edit/5
-        public ActionResult Edit(int? id)
+        public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PositionRequest positionRequest = db.PositionRequests.Find(id);
+
+            PositionRequest positionRequest = await Client.GetPositionRequestById(id);
+
             if (positionRequest == null)
             {
                 return HttpNotFound();
@@ -78,25 +90,25 @@ namespace AES.WebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RequestId,RequestedBy,RequestedByName,PositionName,StoreId,RequestReason,DateRequested,RequestApproved,ApproveBy,ApprovedByName,DateApproved")] PositionRequest positionRequest)
+        public async Task<ActionResult> Edit([Bind(Include = "RequestId,RequestedBy,RequestedByName,PositionName,StoreId,RequestReason,DateRequested,RequestApproved,ApproveBy,ApprovedByName,DateApproved")] PositionRequest positionRequest)
         {
-            if (ModelState.IsValid)
-            {
-                db.Entry(positionRequest).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(positionRequest);
+            if (!ModelState.IsValid) return View(positionRequest);
+
+            await Client.EditPositionRequest(positionRequest);
+
+            return RedirectToAction("Index");
         }
 
         // GET: PositionRequest/Delete/5
-        public ActionResult Delete(int? id)
+        public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PositionRequest positionRequest = db.PositionRequests.Find(id);
+
+            PositionRequest positionRequest = await Client.GetPositionRequestById(id);
+
             if (positionRequest == null)
             {
                 return HttpNotFound();
@@ -107,11 +119,12 @@ namespace AES.WebApplication.Controllers
         // POST: PositionRequest/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            PositionRequest positionRequest = db.PositionRequests.Find(id);
-            db.PositionRequests.Remove(positionRequest);
-            db.SaveChanges();
+            PositionRequest positionRequest = await Client.GetPositionRequestById(id);
+
+            await Client.DeletePositionRequest(id);
+
             return RedirectToAction("Index");
         }
 
@@ -119,7 +132,7 @@ namespace AES.WebApplication.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                Client.Dispose();
             }
             base.Dispose(disposing);
         }
