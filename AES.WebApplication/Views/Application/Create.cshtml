@@ -30,7 +30,7 @@
                         http://www.codeproject.com/Articles/651609/Validating-Social-Security-Numbers-through-Regular
                         must use \\ for escape characters
                     *@
-                    @Html.EditorFor(model => model.SSN, new { htmlAttributes = new { @class = "form-control", placeholder = " # # # - # # - # # # # ",
+                    @Html.EditorFor(model => model.SSN, new { htmlAttributes = new { @class = "form-control", placeholder = " ### - ## - #### ",
                      pattern = "^(?!219-09-9999|078-05-1120)(?!666|000|\\d{2})\\d{3}-(?!00)\\d{2}-(?!0{4})\\d{4}$"} })
                     @Html.ValidationMessageFor(model => model.SSN, "", new { @class = "text-danger" })
                 </div>
@@ -44,7 +44,7 @@
                     @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-5">
-                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", type = "tel", id = "tel", placeholder = " # # # - # # # - # # # # " } })
+                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", type = "tel", id = "tel", placeholder = " ### - ### - #### " } })
                     @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
                 </div>
 
@@ -56,7 +56,7 @@
                     @Html.ValidationMessageFor(model => model.OtherName, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-5">
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", required = "required", type = "email", id = "email", placeholder = "Enter email" } })
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", required = "required", type = "email", id = "email", placeholder = "Enter email address" } })
                     @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3">
-                        @Html.EditorFor(model => model.SalaryExpectation, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.SalaryExpectation, new { htmlAttributes = new { @class = "form-control", placeholder = "Expected Salary" } })
                         @Html.ValidationMessageFor(model => model.SalaryExpectation, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2 col-lg-offset-1">
@@ -212,15 +212,15 @@
                     @Html.LabelFor(model => model.MostRecentEmployerPhone, "Phone:", htmlAttributes: new { @class = "control-label col-lg-2" })
                     @Html.LabelFor(model => model.MostRecentEmployerSupervisor, "Supervisor:", htmlAttributes: new { @class = "control-label col-lg-2" })
                     <div class="col-lg-8">
-                        @Html.EditorFor(model => model.MostRecentEmployerAddress, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MostRecentEmployerAddress, new { htmlAttributes = new { @class = "form-control", placeholder = "Street, City, State, Zip" } })
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerAddress, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MostRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel" } })
+                        @Html.EditorFor(model => model.MostRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerPhone, "", new { @class = "text-danger tel" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MostRecentEmployerSupervisor, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MostRecentEmployerSupervisor, new { htmlAttributes = new { @class = "form-control", placeholder = "First, Last" } })
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerSupervisor, "", new { @class = "text-danger" })
                     </div>
                     @Html.LabelFor(model => model.MostRecentEmployerPosition, "Position:", htmlAttributes: new { @class = "text-left col-lg-8" })
@@ -228,26 +228,26 @@
                     @Html.LabelFor(model => model.MostRecentEmployerEndSalary, "Ending Salary:", htmlAttributes: new { @class = "text-left col-lg-2" })
 
                     <div class="col-lg-8">
-                        @Html.EditorFor(model => model.MostRecentEmployerPosition, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MostRecentEmployerPosition, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Position" } })
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerPosition, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MostRecentEmployerStartSalary, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MostRecentEmployerStartSalary, new { htmlAttributes = new { @class = "form-control", placeholder = "Start Salary" } })
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerStartSalary, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MostRecentEmployerEndSalary, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MostRecentEmployerEndSalary, new { htmlAttributes = new { @class = "form-control", placeholder = "End Salary" } })
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerEndSalary, "", new { @class = "text-danger" })
                     </div>
 
                     @Html.LabelFor(model => model.MostRecentEmployerReasonForLeaving, "Reason for leaving:", htmlAttributes: new { @class = "text-left col-lg-12" })
                     <div class="col-lg-12">
-                        @Html.EditorFor(model => model.MostRecentEmployerReasonForLeaving, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MostRecentEmployerReasonForLeaving, new { htmlAttributes = new { @class = "form-control", placeholder = "Reason for leaving" } })
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerReasonForLeaving, "", new { @class = "text-danger" })
                     </div>
                     @Html.LabelFor(model => model.MostRecentEmployerResponsibilities, "Describe your responsibilities:", htmlAttributes: new { @class = "text-left col-lg-12" })
                     <div class="col-lg-12">
-                        @Html.EditorFor(model => model.MostRecentEmployerResponsibilities, new { htmlAttributes = new { @class = "form-control input-lg" } })
+                        @Html.EditorFor(model => model.MostRecentEmployerResponsibilities, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Responsibilities" } })
                         @Html.ValidationMessageFor(model => model.MostRecentEmployerResponsibilities, "", new { @class = "text-danger" })
                     </div>
                 </fieldset>
@@ -257,7 +257,7 @@
                     @Html.LabelFor(model => model.MiddleRecentEmployerFromDate, "From:", htmlAttributes: new { @class = "text-left col-lg-2" })
                     @Html.LabelFor(model => model.MiddleRecentEmployerToDate, "To:", htmlAttributes: new { @class = "text-left col-lg-2" })
                     <div class="col-lg-8">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerName, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter employer's" } })
+                        @Html.EditorFor(model => model.MiddleRecentEmployerName, new { htmlAttributes = new { @class = "form-control", placeholder = "Employer's Name" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerName, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
@@ -272,40 +272,40 @@
                     @Html.LabelFor(model => model.MiddleRecentEmployerPhone, "Phone:", htmlAttributes: new { @class = "control-label col-lg-2" })
                     @Html.LabelFor(model => model.MiddleRecentEmployerSupervisor, "Supervisor:", htmlAttributes: new { @class = "control-label col-lg-2" })
                     <div class="col-lg-8">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerAddress, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MiddleRecentEmployerAddress, new { htmlAttributes = new { @class = "form-control", placeholder = "Street, City, State, Zip" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerAddress, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel" } })
+                        @Html.EditorFor(model => model.MiddleRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerPhone, "", new { @class = "text-danger tel" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerSupervisor, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MiddleRecentEmployerSupervisor, new { htmlAttributes = new { @class = "form-control", placeholder = "First, Last" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerSupervisor, "", new { @class = "text-danger" })
                     </div>
                     @Html.LabelFor(model => model.MiddleRecentEmployerPosition, "Position:", htmlAttributes: new { @class = "text-left col-lg-8" })
                     @Html.LabelFor(model => model.MiddleRecentEmployerStartSalary, "Starting Salary:", htmlAttributes: new { @class = "text-left col-lg-2" })
                     @Html.LabelFor(model => model.MiddleRecentEmployerEndSalary, "Ending Salary:", htmlAttributes: new { @class = "text-left col-lg-2" })
                     <div class="col-lg-8">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerPosition, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MiddleRecentEmployerPosition, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Position" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerPosition, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerStartSalary, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MiddleRecentEmployerStartSalary, new { htmlAttributes = new { @class = "form-control", placeholder = "Start Salary" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerStartSalary, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerEndSalary, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MiddleRecentEmployerEndSalary, new { htmlAttributes = new { @class = "form-control", placeholder = "End Salary" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerEndSalary, "", new { @class = "text-danger" })
                     </div>
                     @Html.LabelFor(model => model.MiddleRecentEmployerReasonForLeaving, "Reason for leaving:", htmlAttributes: new { @class = "text-left col-lg-12" })
                     <div class="col-lg-12">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerReasonForLeaving, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.MiddleRecentEmployerReasonForLeaving, new { htmlAttributes = new { @class = "form-control", placeholder = "Reason for Leaving" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerReasonForLeaving, "", new { @class = "text-danger" })
                     </div>
                     @Html.LabelFor(model => model.MiddleRecentEmployerResponsibilities, "Describe your responsibilities:", htmlAttributes: new { @class = "text-left col-lg-12" })
                     <div class="col-lg-12">
-                        @Html.EditorFor(model => model.MiddleRecentEmployerResponsibilities, new { htmlAttributes = new { @class = "form-control input-lg" } })
+                        @Html.EditorFor(model => model.MiddleRecentEmployerResponsibilities, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Responsibilities" } })
                         @Html.ValidationMessageFor(model => model.MiddleRecentEmployerResponsibilities, "", new { @class = "text-danger" })
                     </div>
                 </fieldset>
@@ -315,7 +315,7 @@
                     @Html.LabelFor(model => model.LeastRecentEmployerFromDate, "From:", htmlAttributes: new { @class = "text-left col-lg-2" })
                     @Html.LabelFor(model => model.LeastRecentEmployerToDate, "To:", htmlAttributes: new { @class = "text-left col-lg-2" })
                     <div class="col-lg-8">
-                        @Html.EditorFor(model => model.LeastRecentEmployerName, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter employer's name" } })
+                        @Html.EditorFor(model => model.LeastRecentEmployerName, new { htmlAttributes = new { @class = "form-control", placeholder = "Employer's name" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerName, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
@@ -330,40 +330,40 @@
                     @Html.LabelFor(model => model.LeastRecentEmployerPhone, "Phone:", htmlAttributes: new { @class = "control-label col-lg-2" })
                     @Html.LabelFor(model => model.LeastRecentEmployerSupervisor, "Supervisor:", htmlAttributes: new { @class = "control-label col-lg-2" })
                     <div class="col-lg-8">
-                        @Html.EditorFor(model => model.LeastRecentEmployerAddress, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.LeastRecentEmployerAddress, new { htmlAttributes = new { @class = "form-control", placeholder = "Street, City, State, Zip" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerAddress, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.LeastRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel" } })
+                        @Html.EditorFor(model => model.LeastRecentEmployerPhone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerPhone, "", new { @class = "text-danger tel" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.LeastRecentEmployerSupervisor, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.LeastRecentEmployerSupervisor, new { htmlAttributes = new { @class = "form-control", placeholder = "First, Last" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerSupervisor, "", new { @class = "text-danger" })
                     </div>
                     @Html.LabelFor(model => model.LeastRecentEmployerPosition, "Position:", htmlAttributes: new { @class = "text-left col-lg-8" })
                     @Html.LabelFor(model => model.LeastRecentEmployerStartSalary, "Starting Salary:", htmlAttributes: new { @class = "text-left col-lg-2" })
                     @Html.LabelFor(model => model.LeastRecentEmployerEndSalary, "Ending Salary:", htmlAttributes: new { @class = "text-left col-lg-2" })
                     <div class="col-lg-8">
-                        @Html.EditorFor(model => model.LeastRecentEmployerPosition, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.LeastRecentEmployerPosition, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Position" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerPosition, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.LeastRecentEmployerStartSalary, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.LeastRecentEmployerStartSalary, new { htmlAttributes = new { @class = "form-control", placeholder = "Start Salary" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerStartSalary, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-lg-2">
-                        @Html.EditorFor(model => model.LeastRecentEmployerEndSalary, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.LeastRecentEmployerEndSalary, new { htmlAttributes = new { @class = "form-control", placeholder = "End Salary" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerEndSalary, "", new { @class = "text-danger" })
                     </div>
                     @Html.LabelFor(model => model.LeastRecentEmployerReasonForLeaving, "Reason for leaving:", htmlAttributes: new { @class = "text-left col-lg-12" })
                     <div class="col-lg-12">
-                        @Html.EditorFor(model => model.LeastRecentEmployerReasonForLeaving, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.LeastRecentEmployerReasonForLeaving, new { htmlAttributes = new { @class = "form-control", placeholder = "Reason for Leaving" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerReasonForLeaving, "", new { @class = "text-danger" })
                     </div>
                     @Html.LabelFor(model => model.LeastRecentEmployerResponsibilities, "Describe your responsibilities:", htmlAttributes: new { @class = "text-left" })
                     <div class="col-lg-12">
-                        @Html.EditorFor(model => model.LeastRecentEmployerResponsibilities, new { htmlAttributes = new { @class = "form-control input-lg", @rows = 3 } })
+                        @Html.EditorFor(model => model.LeastRecentEmployerResponsibilities, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Responsibilities" } })
                         @Html.ValidationMessageFor(model => model.LeastRecentEmployerResponsibilities, "", new { @class = "text-danger col-lg-12" })
                     </div>
                 </fieldset>
@@ -380,15 +380,15 @@
                 @Html.LabelFor(model => model.MostRecentEducationYearsAttended, "Years attended:", htmlAttributes: new { @class = "text-left col-lg-2" })
                 @Html.LabelFor(model => model.MostRecentEducationDegreeMajor, "Degree/major:", htmlAttributes: new { @class = "text-left col-lg-2" })
                 <div class="col-lg-7">
-                    @Html.EditorFor(model => model.MostRecentEducationName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.MostRecentEducationName, new { htmlAttributes = new { @class = "form-control", placeholder = "School Name, City, State" } })
                     @Html.ValidationMessageFor(model => model.MostRecentEducationName, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.MostRecentEducationYearsAttended, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.MostRecentEducationYearsAttended, new { htmlAttributes = new { @class = "form-control", placeholder = "YYYY - YYYY" } })
                     @Html.ValidationMessageFor(model => model.MostRecentEducationYearsAttended, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.MostRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.MostRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control", placeholder = "Degree / Major" } })
                     @Html.ValidationMessageFor(model => model.MostRecentEducationDegreeMajor, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-1">
@@ -405,15 +405,15 @@
                 @Html.LabelFor(model => model.MiddleRecentEducationDegreeMajor, "Degree/major:", htmlAttributes: new { @class = "text-left col-lg-2" })
 
                 <div class="col-lg-7">
-                    @Html.EditorFor(model => model.MiddleRecentEducationName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.MiddleRecentEducationName, new { htmlAttributes = new { @class = "form-control", placeholder = "School Name, City, State" } })
                     @Html.ValidationMessageFor(model => model.MiddleRecentEducationName, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.MiddleRecentEducationYearsAttended, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.MiddleRecentEducationYearsAttended, new { htmlAttributes = new { @class = "form-control", placeholder = "YYYY - YYYY" } })
                     @Html.ValidationMessageFor(model => model.MiddleRecentEducationYearsAttended, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.MiddleRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.MiddleRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control", placeholder = "Degree / Major" } })
                     @Html.ValidationMessageFor(model => model.MiddleRecentEducationDegreeMajor, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-1">
@@ -431,15 +431,15 @@
                 @Html.LabelFor(model => model.LeastRecentEducationDegreeMajor, "Degree/major:", htmlAttributes: new { @class = "text-left col-lg-2" })
 
                 <div class="col-lg-7">
-                    @Html.EditorFor(model => model.LeastRecentEducationName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.LeastRecentEducationName, new { htmlAttributes = new { @class = "form-control", placeholder = "School Name, City, State" } })
                     @Html.ValidationMessageFor(model => model.LeastRecentEducationName, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.LeastRecentEducationYearsAttended, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.LeastRecentEducationYearsAttended, new { htmlAttributes = new { @class = "form-control", placeholder = "YYYY- YYYY" } })
                     @Html.ValidationMessageFor(model => model.LeastRecentEducationYearsAttended, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.LeastRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.LeastRecentEducationDegreeMajor, new { htmlAttributes = new { @class = "form-control", placeholder = "Degree / Major" } })
                     @Html.ValidationMessageFor(model => model.LeastRecentEducationDegreeMajor, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-1">
@@ -461,67 +461,67 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Reference1Name, "Reference 1 name:", htmlAttributes: new { @class = "text-left col-lg-6" })
                 @Html.LabelFor(model => model.Reference1Phone, "Phone:", htmlAttributes: new { @class = "text-left col-lg-2" })
-                @Html.LabelFor(model => model.Reference1Company, "Company", htmlAttributes: new { @class = "text-left col-lg-2" })
+                @Html.LabelFor(model => model.Reference1Company, "Workplace:", htmlAttributes: new { @class = "text-left col-lg-2" })
                 @Html.LabelFor(model => model.Reference1Title, "Title:", htmlAttributes: new { @class = "text-left col-lg-2" })
 
                 <div class="col-lg-6">
-                    @Html.EditorFor(model => model.Reference1Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Reference1Name, new { htmlAttributes = new { @class = "form-control", placeholder = "First, Last" } })
                     @Html.ValidationMessageFor(model => model.Reference1Name, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference1Phone, new { htmlAttributes = new { @class = "form-control tel" } })
+                    @Html.EditorFor(model => model.Reference1Phone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
                     @Html.ValidationMessageFor(model => model.Reference1Phone, "", new { @class = "text-danger tel" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference1Company, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Reference1Company, new { htmlAttributes = new { @class = "form-control", placeholder = "Workplace" } })
                     @Html.ValidationMessageFor(model => model.Reference1Company, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference1Title, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Reference1Title, new { htmlAttributes = new { @class = "form-control", placeholder = "Title" } })
                     @Html.ValidationMessageFor(model => model.Reference1Title, "", new { @class = "text-danger" })
                 </div>
 
                 @Html.LabelFor(model => model.Reference2Name, "Reference 2 name:", htmlAttributes: new { @class = "text-left col-lg-6" })
                 @Html.LabelFor(model => model.Reference2Phone, "Phone:", htmlAttributes: new { @class = "text-left col-lg-2" })
-                @Html.LabelFor(model => model.Reference2Company, "Company:", htmlAttributes: new { @class = "text-left col-lg-2" })
+                @Html.LabelFor(model => model.Reference2Company, "Workplace:", htmlAttributes: new { @class = "text-left col-lg-2" })
                 @Html.LabelFor(model => model.Reference2Title, "Title:", htmlAttributes: new { @class = "text-left col-lg-2" })
 
                 <div class="col-lg-6">
-                    @Html.EditorFor(model => model.Reference2Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Reference2Name, new { htmlAttributes = new { @class = "form-control", placeholder = "First, Last" } })
                     @Html.ValidationMessageFor(model => model.Reference1Name, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference2Phone, new { htmlAttributes = new { @class = "form-control tel" } })
+                    @Html.EditorFor(model => model.Reference2Phone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
                     @Html.ValidationMessageFor(model => model.Reference1Phone, "", new { @class = "text-danger tel" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference2Company, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Reference2Company, new { htmlAttributes = new { @class = "form-control", placeholder = "Workplace" } })
                     @Html.ValidationMessageFor(model => model.Reference1Company, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference2Title, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Reference2Title, new { htmlAttributes = new { @class = "form-control", placeholder = "Title" } })
                     @Html.ValidationMessageFor(model => model.Reference1Title, "", new { @class = "text-danger" })
                 </div>
 
                 @Html.LabelFor(model => model.Reference3Name, "Reference 3 name:", htmlAttributes: new { @class = "text-left col-lg-6" })
                 @Html.LabelFor(model => model.Reference3Phone, "Phone:", htmlAttributes: new { @class = "text-left col-lg-2" })
-                @Html.LabelFor(model => model.Reference3Company, "Company", htmlAttributes: new { @class = "text-left col-lg-2" })
+                @Html.LabelFor(model => model.Reference3Company, "Workplace:", htmlAttributes: new { @class = "text-left col-lg-2" })
                 @Html.LabelFor(model => model.Reference3Title, "Title:", htmlAttributes: new { @class = "text-left col-lg-2" })
 
                 <div class="col-lg-6">
-                    @Html.EditorFor(model => model.Reference3Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Reference3Name, new { htmlAttributes = new { @class = "form-control", placeholder = "First, Last" } })
                     @Html.ValidationMessageFor(model => model.Reference3Name, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference3Phone, new { htmlAttributes = new { @class = "form-control tel" } })
+                    @Html.EditorFor(model => model.Reference3Phone, new { htmlAttributes = new { @class = "form-control tel", placeholder = "### - ### - ####" } })
                     @Html.ValidationMessageFor(model => model.Reference3Phone, "", new { @class = "text-danger tel" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference3Company, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Reference3Company, new { htmlAttributes = new { @class = "form-control", placeholder = "Workplace" } })
                     @Html.ValidationMessageFor(model => model.Reference3Company, "", new { @class = "text-danger" })
                 </div>
                 <div class="col-lg-2">
-                    @Html.EditorFor(model => model.Reference3Title, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.Reference3Title, new { htmlAttributes = new { @class = "form-control", placeholder = "Title" } })
                     @Html.ValidationMessageFor(model => model.Reference3Title, "", new { @class = "text-danger" })
                 </div>
             </div>
