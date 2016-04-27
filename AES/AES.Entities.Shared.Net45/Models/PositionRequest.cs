@@ -112,6 +112,18 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _RequestApproved;
 
+		public bool RequestDenied
+		{ 
+			get { return _RequestDenied; }
+			set
+			{
+				if (Equals(value, _RequestDenied)) return;
+				_RequestDenied = value;
+				NotifyPropertyChanged();
+			}
+		}
+		private bool _RequestDenied;
+
 		public int? ApproveBy
 		{ 
 			get { return _ApproveBy; }
@@ -136,6 +148,19 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _ApprovedByName;
+
+        [Required]
+		public string DenialReason
+		{ 
+			get { return _DenialReason; }
+			set
+			{
+				if (Equals(value, _DenialReason)) return;
+				_DenialReason = value;
+				NotifyPropertyChanged();
+			}
+		}
+		private string _DenialReason;
 
 		public DateTime? DateApproved
 		{ 

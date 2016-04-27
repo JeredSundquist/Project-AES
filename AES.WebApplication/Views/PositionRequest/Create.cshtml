@@ -65,6 +65,12 @@
             </div>
         </div>
 
+        <hr>
+
+        <div>
+            <h5>This section must be completed by Store Manager</h5>
+        </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.ApproveBy, "Supervisor ID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -72,8 +78,6 @@
                 @Html.ValidationMessageFor(model => model.ApproveBy, "", new {@class = "text-danger"})
             </div>
         </div>
-
-        <hr>
 
         <div class="form-group">
             @Html.LabelFor(model => model.ApprovedByName, "Supervisor Name", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -94,7 +98,25 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DateApproved, "Date approved", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.RequestApproved, "Request Denied", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.RequestDenied)
+                    @Html.ValidationMessageFor(model => model.RequestDenied, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RequestReason, "Reason for denial", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DenialReason, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DenialReason, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DateApproved, "Date approved/denied", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DateApproved, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DateApproved, "", new { @class = "text-danger" })

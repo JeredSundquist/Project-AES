@@ -44,7 +44,15 @@ namespace AES.Entities.Shared.Net45.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.SSN)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.Address)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.PhoneNumber)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
@@ -61,14 +69,26 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.SalaryExpectation)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.MostRecentEmployerFromDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.MostRecentEmployerToDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerAddress)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.MostRecentEmployerPhone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
@@ -81,11 +101,11 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerStartSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerEndSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerReasonForLeaving)
@@ -100,7 +120,19 @@ namespace AES.Entities.Shared.Net45.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.MiddleRecentEmployerFromDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.MiddleRecentEmployerToDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.MiddleRecentEmployerAddress)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.MiddleRecentEmployerPhone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
@@ -113,11 +145,11 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MiddleRecentEmployerStartSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MiddleRecentEmployerEndSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MiddleRecentEmployerReasonForLeaving)
@@ -132,7 +164,19 @@ namespace AES.Entities.Shared.Net45.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.LeastRecentEmployerFromDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.LeastRecentEmployerToDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.LeastRecentEmployerAddress)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.LeastRecentEmployerPhone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
@@ -145,11 +189,11 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.LeastRecentEmployerStartSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.LeastRecentEmployerEndSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.LeastRecentEmployerReasonForLeaving)
@@ -200,6 +244,10 @@ namespace AES.Entities.Shared.Net45.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.Reference1Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.Reference1Company)
                 .IsUnicode(false);
 
@@ -209,6 +257,10 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.Reference2Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.Reference2Phone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
@@ -224,11 +276,19 @@ namespace AES.Entities.Shared.Net45.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.Reference3Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.Reference3Company)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.Reference3Title)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.HiringManagerNotes)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Education>()

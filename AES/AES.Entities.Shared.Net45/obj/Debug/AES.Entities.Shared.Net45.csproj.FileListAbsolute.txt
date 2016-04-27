@@ -69,3 +69,4 @@ C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Project-AES\AES
 C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Project-AES\AES\AES.Entities.Shared.Net45\bin\Debug\TrackableEntities.EF.6.xml
 C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.dll
 C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.pdb
+C:\Users\Justin\Documents\School\Spring 2016\Junior Projects - 2\Project-AES\AES\AES.Entities.Shared.Net45\obj\Debug\AES.Entities.Shared.Net45.csprojResolveAssemblyReference.cache

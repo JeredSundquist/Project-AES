@@ -13,7 +13,7 @@ using AES.Entities.Shared.Net45.Models;
 
 // NOTE: Primary key name and/or type may need to be set manually.
 
-namespace AES.JobLibrarySVC.WebApi.Controllers
+namespace AES.PositionRequestSVC.WebApi.Controllers
 {
     public class PositionRequestController : ApiController
     {
