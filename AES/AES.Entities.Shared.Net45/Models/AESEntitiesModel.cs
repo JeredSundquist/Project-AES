@@ -61,7 +61,7 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.SalaryExpectation)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerName)
@@ -81,11 +81,11 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerStartSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerEndSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerReasonForLeaving)
@@ -113,11 +113,11 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MiddleRecentEmployerStartSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MiddleRecentEmployerEndSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MiddleRecentEmployerReasonForLeaving)
@@ -145,11 +145,11 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.LeastRecentEmployerStartSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.LeastRecentEmployerEndSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.LeastRecentEmployerReasonForLeaving)
