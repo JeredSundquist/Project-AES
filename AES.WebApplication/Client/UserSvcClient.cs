@@ -6,38 +6,38 @@ using WebApiRestService;
 
 namespace AES.WebApplication.Client
 {
-    public class PositionRequestSvcClient : WebApiClient<PositionRequest>
+    public class UserSvcClient : WebApiClient<User>
     {
         public new static readonly WebApiClientOptions Options = new WebApiClientOptions()
         {
             BaseAddress = "http://localhost:" + "53253" + "/",
             ContentType = ContentType.Json,
             Timeout = 80000,
-            Controller = "api/PositionRequest"
+            Controller = "api/User"
         };
 
         /// <summary>
-        /// Creates an instance of PositionRequestClient using default options
+        /// Creates an instance of UserClient using default options
         /// </summary>
-        public PositionRequestSvcClient()
+        public UserSvcClient()
             : this(Options)
         {
         }
 
         /// <summary>
-        /// Creates an instance of PositionRequestClient using explicit options
+        /// Creates an instance of UserClient using explicit options
         /// </summary>
-        private PositionRequestSvcClient(WebApiClientOptions options)
+        private UserSvcClient(WebApiClientOptions options)
             : base(options)
         {
         }
 
-        public async Task<IEnumerable<PositionRequest>> GetPositionRequests()
+        public async Task<IEnumerable<User>> GetUsers()
         {
             return await GetManyAsync();
         }
 
-        public async Task<PositionRequest> GetPositionRequestById(int? id)
+        public async Task<User> GetUserById(int? id)
         {
             if (id == null)
             {
@@ -58,17 +58,17 @@ namespace AES.WebApplication.Client
             }
         }
 
-        public async Task<PositionRequest> CreatePositionRequest(PositionRequest positionRequest)
+        public async Task<User> CreateUser(User user)
         {
-            return await CreateAsync(positionRequest);
+            return await CreateAsync(user);
         }
 
-        public async Task<PositionRequest> EditPositionRequest(PositionRequest positionRequest)
+        public async Task<User> EditUser(User user)
         {
-            return await EditAsync(positionRequest);
+            return await EditAsync(user);
         }
 
-        public async Task DeletePositionRequest(int id)
+        public async Task DeleteUser(int id)
         {
             await DeleteAsync(id);
         }
