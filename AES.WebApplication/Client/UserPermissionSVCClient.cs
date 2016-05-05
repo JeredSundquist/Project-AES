@@ -6,38 +6,38 @@ using WebApiRestService;
 
 namespace AES.WebApplication.Client
 {
-    public class PositionRequestSvcClient : WebApiClient<PositionRequest>
+    public class UserPermissionSvcClient : WebApiClient<UserPermission>
     {
         public new static readonly WebApiClientOptions Options = new WebApiClientOptions()
         {
             BaseAddress = "http://localhost:" + "53253" + "/",
             ContentType = ContentType.Json,
             Timeout = 80000,
-            Controller = "api/PositionRequest"
+            Controller = "api/UserPermission"
         };
 
         /// <summary>
-        /// Creates an instance of PositionRequestClient using default options
+        /// Creates an instance of UserPermissionClient using default options
         /// </summary>
-        public PositionRequestSvcClient()
+        public UserPermissionSvcClient()
             : this(Options)
         {
         }
 
         /// <summary>
-        /// Creates an instance of PositionRequestClient using explicit options
+        /// Creates an instance of UserPermissionClient using explicit options
         /// </summary>
-        private PositionRequestSvcClient(WebApiClientOptions options)
+        private UserPermissionSvcClient(WebApiClientOptions options)
             : base(options)
         {
         }
 
-        public async Task<IEnumerable<PositionRequest>> GetPositionRequests()
+        public async Task<IEnumerable<UserPermission>> GetUserPermissions()
         {
             return await GetManyAsync();
         }
 
-        public async Task<PositionRequest> GetPositionRequestById(int? id)
+        public async Task<UserPermission> GetUserPermissionById(int? id)
         {
             if (id == null)
             {
@@ -58,17 +58,17 @@ namespace AES.WebApplication.Client
             }
         }
 
-        public async Task<PositionRequest> CreatePositionRequest(PositionRequest positionRequest)
+        public async Task<UserPermission> CreateUserPermission(UserPermission userPermission)
         {
-            return await CreateAsync(positionRequest);
+            return await CreateAsync(userPermission);
         }
 
-        public async Task<PositionRequest> EditPositionRequest(PositionRequest positionRequest)
+        public async Task<UserPermission> EditUserPermission(UserPermission userPermission)
         {
-            return await EditAsync(positionRequest);
+            return await EditAsync(userPermission);
         }
 
-        public async Task DeletePositionRequest(int id)
+        public async Task DeleteUserPermission(int id)
         {
             await DeleteAsync(id);
         }
