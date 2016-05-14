@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -7,13 +18,19 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
+
     [Table("Store")]
+
     public partial class Store : EntityBase
     {
+
         public Store()
         {
+
             Positions = new ChangeTrackingCollection<Position>();
+
         }
+
 
 		public int StoreId
 		{ 
@@ -27,6 +44,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _StoreId;
 
+
 		public string StoreLocation
 		{ 
 			get { return _StoreLocation; }
@@ -38,6 +56,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _StoreLocation;
+
 
 		public string StoreName
 		{ 
@@ -51,6 +70,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _StoreName;
 
+
 		public ChangeTrackingCollection<Position> Positions
 		{
 			get { return _Positions; }
@@ -62,5 +82,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private ChangeTrackingCollection<Position> _Positions;
+
     }
 }

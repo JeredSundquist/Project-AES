@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -7,9 +18,12 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
+
     [Table("Application")]
+
     public partial class Application : EntityBase
     {
+
 		public int ApplicationId
 		{ 
 			get { return _ApplicationId; }
@@ -22,7 +36,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _ApplicationId;
 
+
         [StringLength(50)]
+
 		public string Name
 		{ 
 			get { return _Name; }
@@ -35,8 +51,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Name;
 
+
         [StringLength(13)]
-        public string SSN
+
+		public string SSN
 		{ 
 			get { return _SSN; }
 			set
@@ -48,7 +66,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _SSN;
 
+
         [StringLength(50)]
+
 		public string Address
 		{ 
 			get { return _Address; }
@@ -61,8 +81,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Address;
 
+
         [StringLength(16)]
-        public string PhoneNumber
+
+		public string PhoneNumber
 		{ 
 			get { return _PhoneNumber; }
 			set
@@ -74,7 +96,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _PhoneNumber;
 
+
         [StringLength(50)]
+
 		public string OtherName
 		{ 
 			get { return _OtherName; }
@@ -87,7 +111,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _OtherName;
 
+
         [StringLength(50)]
+
 		public string Email
 		{ 
 			get { return _Email; }
@@ -100,7 +126,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Email;
 
+
         [StringLength(50)]
+
 		public string PositionsApplied
 		{ 
 			get { return _PositionsApplied; }
@@ -113,8 +141,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _PositionsApplied;
 
+
         [StringLength(16)]
-        public string SalaryExpectation
+
+		public string SalaryExpectation
 		{ 
 			get { return _SalaryExpectation; }
 			set
@@ -125,6 +155,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _SalaryExpectation;
+
 
 		public bool FullTime
 		{ 
@@ -138,6 +169,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _FullTime;
 
+
 		public bool PartTime
 		{ 
 			get { return _PartTime; }
@@ -149,6 +181,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private bool _PartTime;
+
 
 		public bool Days
 		{ 
@@ -162,6 +195,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _Days;
 
+
 		public bool Evenings
 		{ 
 			get { return _Evenings; }
@@ -173,6 +207,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private bool _Evenings;
+
 
 		public bool Weekends
 		{ 
@@ -186,6 +221,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _Weekends;
 
+
 		public bool MondayAvailable
 		{ 
 			get { return _MondayAvailable; }
@@ -197,6 +233,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private bool _MondayAvailable;
+
 
 		public bool TuesdayAvailable
 		{ 
@@ -210,6 +247,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _TuesdayAvailable;
 
+
 		public bool WednesdayAvailable
 		{ 
 			get { return _WednesdayAvailable; }
@@ -221,6 +259,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private bool _WednesdayAvailable;
+
 
 		public bool ThursdayAvailable
 		{ 
@@ -234,6 +273,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _ThursdayAvailable;
 
+
 		public bool FridayAvailable
 		{ 
 			get { return _FridayAvailable; }
@@ -245,6 +285,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private bool _FridayAvailable;
+
 
 		public bool SaturdayAvailable
 		{ 
@@ -258,6 +299,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _SaturdayAvailable;
 
+
 		public bool SundayAvailable
 		{ 
 			get { return _SundayAvailable; }
@@ -270,7 +312,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _SundayAvailable;
 
+
         [StringLength(50)]
+
 		public string MostRecentEmployerName
 		{ 
 			get { return _MostRecentEmployerName; }
@@ -283,8 +327,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEmployerName;
 
+
         [StringLength(16)]
-        public string MostRecentEmployerFromDate
+
+		public string MostRecentEmployerFromDate
 		{ 
 			get { return _MostRecentEmployerFromDate; }
 			set
@@ -296,8 +342,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEmployerFromDate;
 
+
         [StringLength(16)]
-        public string MostRecentEmployerToDate
+
+		public string MostRecentEmployerToDate
 		{ 
 			get { return _MostRecentEmployerToDate; }
 			set
@@ -309,7 +357,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEmployerToDate;
 
+
         [StringLength(50)]
+
 		public string MostRecentEmployerAddress
 		{ 
 			get { return _MostRecentEmployerAddress; }
@@ -322,8 +372,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEmployerAddress;
 
+
         [StringLength(16)]
-        public string MostRecentEmployerPhone
+
+		public string MostRecentEmployerPhone
 		{ 
 			get { return _MostRecentEmployerPhone; }
 			set
@@ -335,7 +387,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEmployerPhone;
 
+
         [StringLength(15)]
+
 		public string MostRecentEmployerSupervisor
 		{ 
 			get { return _MostRecentEmployerSupervisor; }
@@ -348,7 +402,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEmployerSupervisor;
 
+
         [StringLength(50)]
+
 		public string MostRecentEmployerPosition
 		{ 
 			get { return _MostRecentEmployerPosition; }
@@ -361,8 +417,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEmployerPosition;
 
+
         [StringLength(16)]
-        public string MostRecentEmployerStartSalary
+
+		public string MostRecentEmployerStartSalary
 		{ 
 			get { return _MostRecentEmployerStartSalary; }
 			set
@@ -374,8 +432,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEmployerStartSalary;
 
+
         [StringLength(16)]
-        public string MostRecentEmployerEndSalary
+
+		public string MostRecentEmployerEndSalary
 		{ 
 			get { return _MostRecentEmployerEndSalary; }
 			set
@@ -387,7 +447,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEmployerEndSalary;
 
+
         [StringLength(80)]
+
 		public string MostRecentEmployerReasonForLeaving
 		{ 
 			get { return _MostRecentEmployerReasonForLeaving; }
@@ -399,6 +461,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _MostRecentEmployerReasonForLeaving;
+
 
 		public string MostRecentEmployerResponsibilities
 		{ 
@@ -412,7 +475,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEmployerResponsibilities;
 
+
         [StringLength(50)]
+
 		public string MiddleRecentEmployerName
 		{ 
 			get { return _MiddleRecentEmployerName; }
@@ -425,8 +490,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEmployerName;
 
+
         [StringLength(16)]
-        public string MiddleRecentEmployerFromDate
+
+		public string MiddleRecentEmployerFromDate
 		{ 
 			get { return _MiddleRecentEmployerFromDate; }
 			set
@@ -438,8 +505,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEmployerFromDate;
 
+
         [StringLength(16)]
-        public string MiddleRecentEmployerToDate
+
+		public string MiddleRecentEmployerToDate
 		{ 
 			get { return _MiddleRecentEmployerToDate; }
 			set
@@ -451,7 +520,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEmployerToDate;
 
+
         [StringLength(50)]
+
 		public string MiddleRecentEmployerAddress
 		{ 
 			get { return _MiddleRecentEmployerAddress; }
@@ -464,8 +535,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEmployerAddress;
 
+
         [StringLength(16)]
-        public string MiddleRecentEmployerPhone
+
+		public string MiddleRecentEmployerPhone
 		{ 
 			get { return _MiddleRecentEmployerPhone; }
 			set
@@ -477,7 +550,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEmployerPhone;
 
-        [StringLength(15)]
+
+        [StringLength(20)]
+
 		public string MiddleRecentEmployerSupervisor
 		{ 
 			get { return _MiddleRecentEmployerSupervisor; }
@@ -490,7 +565,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEmployerSupervisor;
 
+
         [StringLength(50)]
+
 		public string MiddleRecentEmployerPosition
 		{ 
 			get { return _MiddleRecentEmployerPosition; }
@@ -503,8 +580,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEmployerPosition;
 
+
         [StringLength(16)]
-        public string MiddleRecentEmployerStartSalary
+
+		public string MiddleRecentEmployerStartSalary
 		{ 
 			get { return _MiddleRecentEmployerStartSalary; }
 			set
@@ -516,8 +595,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEmployerStartSalary;
 
+
         [StringLength(16)]
-        public string MiddleRecentEmployerEndSalary
+
+		public string MiddleRecentEmployerEndSalary
 		{ 
 			get { return _MiddleRecentEmployerEndSalary; }
 			set
@@ -529,7 +610,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEmployerEndSalary;
 
+
         [StringLength(50)]
+
 		public string MiddleRecentEmployerReasonForLeaving
 		{ 
 			get { return _MiddleRecentEmployerReasonForLeaving; }
@@ -541,6 +624,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _MiddleRecentEmployerReasonForLeaving;
+
 
 		public string MiddleRecentEmployerResponsibilities
 		{ 
@@ -554,7 +638,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEmployerResponsibilities;
 
+
         [StringLength(50)]
+
 		public string LeastRecentEmployerName
 		{ 
 			get { return _LeastRecentEmployerName; }
@@ -567,8 +653,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEmployerName;
 
+
         [StringLength(16)]
-        public string LeastRecentEmployerFromDate
+
+		public string LeastRecentEmployerFromDate
 		{ 
 			get { return _LeastRecentEmployerFromDate; }
 			set
@@ -580,8 +668,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEmployerFromDate;
 
+
         [StringLength(16)]
-        public string LeastRecentEmployerToDate
+
+		public string LeastRecentEmployerToDate
 		{ 
 			get { return _LeastRecentEmployerToDate; }
 			set
@@ -593,7 +683,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEmployerToDate;
 
+
         [StringLength(50)]
+
 		public string LeastRecentEmployerAddress
 		{ 
 			get { return _LeastRecentEmployerAddress; }
@@ -606,8 +698,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEmployerAddress;
 
+
         [StringLength(16)]
-        public string LeastRecentEmployerPhone
+
+		public string LeastRecentEmployerPhone
 		{ 
 			get { return _LeastRecentEmployerPhone; }
 			set
@@ -619,7 +713,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEmployerPhone;
 
-        [StringLength(15)]
+
+        [StringLength(20)]
+
 		public string LeastRecentEmployerSupervisor
 		{ 
 			get { return _LeastRecentEmployerSupervisor; }
@@ -632,7 +728,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEmployerSupervisor;
 
+
         [StringLength(50)]
+
 		public string LeastRecentEmployerPosition
 		{ 
 			get { return _LeastRecentEmployerPosition; }
@@ -645,8 +743,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEmployerPosition;
 
+
         [StringLength(16)]
-        public string LeastRecentEmployerStartSalary
+
+		public string LeastRecentEmployerStartSalary
 		{ 
 			get { return _LeastRecentEmployerStartSalary; }
 			set
@@ -658,8 +758,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEmployerStartSalary;
 
+
         [StringLength(16)]
-        public string LeastRecentEmployerEndSalary
+
+		public string LeastRecentEmployerEndSalary
 		{ 
 			get { return _LeastRecentEmployerEndSalary; }
 			set
@@ -671,7 +773,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEmployerEndSalary;
 
+
         [StringLength(50)]
+
 		public string LeastRecentEmployerReasonForLeaving
 		{ 
 			get { return _LeastRecentEmployerReasonForLeaving; }
@@ -683,6 +787,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _LeastRecentEmployerReasonForLeaving;
+
 
 		public string LeastRecentEmployerResponsibilities
 		{ 
@@ -696,7 +801,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEmployerResponsibilities;
 
+
         [StringLength(40)]
+
 		public string MostRecentEducationName
 		{ 
 			get { return _MostRecentEducationName; }
@@ -709,7 +816,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEducationName;
 
+
         [StringLength(10)]
+
 		public string MostRecentEducationYearsAttended
 		{ 
 			get { return _MostRecentEducationYearsAttended; }
@@ -721,6 +830,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _MostRecentEducationYearsAttended;
+
 
 		public bool MostRecentEducationGraduated
 		{ 
@@ -734,7 +844,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _MostRecentEducationGraduated;
 
+
         [StringLength(30)]
+
 		public string MostRecentEducationDegreeMajor
 		{ 
 			get { return _MostRecentEducationDegreeMajor; }
@@ -747,7 +859,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MostRecentEducationDegreeMajor;
 
+
         [StringLength(40)]
+
 		public string MiddleRecentEducationName
 		{ 
 			get { return _MiddleRecentEducationName; }
@@ -760,7 +874,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEducationName;
 
+
         [StringLength(10)]
+
 		public string MiddleRecentEducationYearsAttended
 		{ 
 			get { return _MiddleRecentEducationYearsAttended; }
@@ -772,6 +888,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _MiddleRecentEducationYearsAttended;
+
 
 		public bool MiddleRecentEducationGraduated
 		{ 
@@ -785,7 +902,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _MiddleRecentEducationGraduated;
 
+
         [StringLength(30)]
+
 		public string MiddleRecentEducationDegreeMajor
 		{ 
 			get { return _MiddleRecentEducationDegreeMajor; }
@@ -798,7 +917,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _MiddleRecentEducationDegreeMajor;
 
+
         [StringLength(40)]
+
 		public string LeastRecentEducationName
 		{ 
 			get { return _LeastRecentEducationName; }
@@ -811,7 +932,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEducationName;
 
+
         [StringLength(10)]
+
 		public string LeastRecentEducationYearsAttended
 		{ 
 			get { return _LeastRecentEducationYearsAttended; }
@@ -823,6 +946,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _LeastRecentEducationYearsAttended;
+
 
 		public bool LeastRecentEducationGraduated
 		{ 
@@ -836,7 +960,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _LeastRecentEducationGraduated;
 
+
         [StringLength(30)]
+
 		public string LeastRecentEducationDegreeMajor
 		{ 
 			get { return _LeastRecentEducationDegreeMajor; }
@@ -849,7 +975,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _LeastRecentEducationDegreeMajor;
 
+
         [StringLength(40)]
+
 		public string Reference1Name
 		{ 
 			get { return _Reference1Name; }
@@ -862,8 +990,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference1Name;
 
+
         [StringLength(16)]
-        public string Reference1Phone
+
+		public string Reference1Phone
 		{ 
 			get { return _Reference1Phone; }
 			set
@@ -875,7 +1005,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference1Phone;
 
-        [StringLength(15)]
+
+        [StringLength(20)]
+
 		public string Reference1Company
 		{ 
 			get { return _Reference1Company; }
@@ -888,7 +1020,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference1Company;
 
+
         [StringLength(15)]
+
 		public string Reference1Title
 		{ 
 			get { return _Reference1Title; }
@@ -901,7 +1035,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference1Title;
 
+
         [StringLength(40)]
+
 		public string Reference2Name
 		{ 
 			get { return _Reference2Name; }
@@ -914,8 +1050,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference2Name;
 
+
         [StringLength(16)]
-        public string Reference2Phone
+
+		public string Reference2Phone
 		{ 
 			get { return _Reference2Phone; }
 			set
@@ -927,7 +1065,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference2Phone;
 
-        [StringLength(15)]
+
+        [StringLength(20)]
+
 		public string Reference2Company
 		{ 
 			get { return _Reference2Company; }
@@ -940,7 +1080,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference2Company;
 
-        [StringLength(15)]
+
+        [StringLength(20)]
+
 		public string Reference2Title
 		{ 
 			get { return _Reference2Title; }
@@ -953,7 +1095,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference2Title;
 
+
         [StringLength(40)]
+
 		public string Reference3Name
 		{ 
 			get { return _Reference3Name; }
@@ -966,8 +1110,10 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference3Name;
 
-        [StringLength(50)]
-        public string Reference3Phone
+
+        [StringLength(16)]
+
+		public string Reference3Phone
 		{ 
 			get { return _Reference3Phone; }
 			set
@@ -979,7 +1125,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference3Phone;
 
-        [StringLength(15)]
+
+        [StringLength(20)]
+
 		public string Reference3Company
 		{ 
 			get { return _Reference3Company; }
@@ -992,19 +1140,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference3Company;
 
-        public string HiringManagerNotes
-        {
-            get { return _HiringManagerNotes; }
-            set
-            {
-                if (Equals(value, _HiringManagerNotes)) return;
-                _HiringManagerNotes = value;
-                NotifyPropertyChanged();
-            }
-        }
-        private string _HiringManagerNotes;
 
-        [StringLength(15)]
+        [StringLength(20)]
+
 		public string Reference3Title
 		{ 
 			get { return _Reference3Title; }
@@ -1017,6 +1155,20 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Reference3Title;
 
+
+		public string HiringManagerNotes
+		{ 
+			get { return _HiringManagerNotes; }
+			set
+			{
+				if (Equals(value, _HiringManagerNotes)) return;
+				_HiringManagerNotes = value;
+				NotifyPropertyChanged();
+			}
+		}
+		private string _HiringManagerNotes;
+
+
 		public DateTime? ApplicationDate
 		{ 
 			get { return _ApplicationDate; }
@@ -1028,5 +1180,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private DateTime? _ApplicationDate;
+
     }
 }

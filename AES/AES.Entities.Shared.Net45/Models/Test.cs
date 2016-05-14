@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -7,13 +18,19 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
+
     [Table("Test")]
+
     public partial class Test : EntityBase
     {
+
         public Test()
         {
+
             Positions = new ChangeTrackingCollection<Position>();
+
         }
+
 
 		public int TestId
 		{ 
@@ -27,6 +44,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _TestId;
 
+
 		public string QuestionList
 		{ 
 			get { return _QuestionList; }
@@ -38,6 +56,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _QuestionList;
+
 
 		public int? passingScore
 		{ 
@@ -51,6 +70,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _passingScore;
 
+
 		public string QuestionName
 		{ 
 			get { return _QuestionName; }
@@ -63,6 +83,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _QuestionName;
 
+
 		public ChangeTrackingCollection<Position> Positions
 		{
 			get { return _Positions; }
@@ -74,5 +95,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private ChangeTrackingCollection<Position> _Positions;
+
     }
 }

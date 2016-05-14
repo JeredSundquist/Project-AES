@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -7,13 +18,19 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
+
     [Table("Position")]
+
     public partial class Position : EntityBase
     {
+
         public Position()
         {
+
             AppliedPositions = new ChangeTrackingCollection<AppliedPosition>();
+
         }
+
 
 		public int PositionId
 		{ 
@@ -27,7 +44,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _PositionId;
 
+
         [Required]
+
 		public string PositionName
 		{ 
 			get { return _PositionName; }
@@ -40,7 +59,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _PositionName;
 
+
         [Required]
+
 		public string PositionDesc
 		{ 
 			get { return _PositionDesc; }
@@ -52,6 +73,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _PositionDesc;
+
 
 		public int? StoreId
 		{ 
@@ -65,6 +87,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _StoreId;
 
+
 		public int? TestId
 		{ 
 			get { return _TestId; }
@@ -77,6 +100,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _TestId;
 
+
 		public ChangeTrackingCollection<AppliedPosition> AppliedPositions
 		{
 			get { return _AppliedPositions; }
@@ -88,6 +112,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private ChangeTrackingCollection<AppliedPosition> _AppliedPositions;
+
 
 
 		public Store Store
@@ -106,6 +131,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private ChangeTrackingCollection<Store> StoreChangeTracker { get; set; }
 
 
+
 		public Test Test
 		{
 			get { return _Test; }
@@ -120,5 +146,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private Test _Test;
 		private ChangeTrackingCollection<Test> TestChangeTracker { get; set; }
+
     }
 }

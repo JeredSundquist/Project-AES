@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -7,11 +18,16 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
+
     [Table("UserPermission")]
+
     public partial class UserPermission : EntityBase
     {
+
         [Key]
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+
 		public int UserId
 		{ 
 			get { return _UserId; }
@@ -23,6 +39,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int _UserId;
+
 
 		public bool editPosition
 		{ 
@@ -36,6 +53,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _editPosition;
 
+
 		public bool requestPosition
 		{ 
 			get { return _requestPosition; }
@@ -47,6 +65,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private bool _requestPosition;
+
 
 		public bool viewPosition
 		{ 
@@ -60,6 +79,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _viewPosition;
 
+
 		public bool editStore
 		{ 
 			get { return _editStore; }
@@ -71,6 +91,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private bool _editStore;
+
 
 		public bool viewStore
 		{ 
@@ -84,6 +105,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _viewStore;
 
+
 		public bool editTest
 		{ 
 			get { return _editTest; }
@@ -96,6 +118,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _editTest;
 
+
 		public bool viewTest
 		{ 
 			get { return _viewTest; }
@@ -107,6 +130,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private bool _viewTest;
+
 
 
 		public User User
@@ -123,5 +147,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private User _User;
 		private ChangeTrackingCollection<User> UserChangeTracker { get; set; }
+
     }
 }

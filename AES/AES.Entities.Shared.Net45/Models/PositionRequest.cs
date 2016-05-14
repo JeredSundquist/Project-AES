@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -7,10 +18,14 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
+
     [Table("PositionRequest")]
+
     public partial class PositionRequest : EntityBase
     {
+
         [Key]
+
 		public int RequestId
 		{ 
 			get { return _RequestId; }
@@ -22,6 +37,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int _RequestId;
+
 
 		public int RequestedBy
 		{ 
@@ -35,8 +51,11 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _RequestedBy;
 
+
         [Required]
+
         [StringLength(50)]
+
 		public string RequestedByName
 		{ 
 			get { return _RequestedByName; }
@@ -49,8 +68,11 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _RequestedByName;
 
+
         [Required]
+
         [StringLength(50)]
+
 		public string PositionName
 		{ 
 			get { return _PositionName; }
@@ -62,6 +84,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _PositionName;
+
 
 		public int StoreId
 		{ 
@@ -75,7 +98,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _StoreId;
 
+
         [Required]
+
 		public string RequestReason
 		{ 
 			get { return _RequestReason; }
@@ -87,6 +112,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _RequestReason;
+
 
 		public DateTime? DateRequested
 		{ 
@@ -100,6 +126,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private DateTime? _DateRequested;
 
+
 		public bool RequestApproved
 		{ 
 			get { return _RequestApproved; }
@@ -111,6 +138,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private bool _RequestApproved;
+
 
 		public bool RequestDenied
 		{ 
@@ -124,6 +152,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _RequestDenied;
 
+
 		public int? ApproveBy
 		{ 
 			get { return _ApproveBy; }
@@ -136,7 +165,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _ApproveBy;
 
+
         [StringLength(50)]
+
 		public string ApprovedByName
 		{ 
 			get { return _ApprovedByName; }
@@ -149,7 +180,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _ApprovedByName;
 
+
         [Required]
+
 		public string DenialReason
 		{ 
 			get { return _DenialReason; }
@@ -162,6 +195,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _DenialReason;
 
+
 		public DateTime? DateApproved
 		{ 
 			get { return _DateApproved; }
@@ -173,5 +207,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private DateTime? _DateApproved;
+
     }
 }
