@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -18,12 +7,9 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
-
     [Table("User")]
-
     public partial class User : EntityBase
     {
-
 		public int UserId
 		{ 
 			get { return _UserId; }
@@ -35,7 +21,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int _UserId;
-
 
 		public string UserName
 		{ 
@@ -49,7 +34,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _UserName;
 
-
 		public string password
 		{ 
 			get { return _password; }
@@ -61,7 +45,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _password;
-
 
 		public string email
 		{ 
@@ -75,7 +58,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _email;
 
-
 		public string Address
 		{ 
 			get { return _Address; }
@@ -87,7 +69,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _Address;
-
 
 
 		public UserPermission UserPermission
@@ -104,6 +85,5 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private UserPermission _UserPermission;
 		private ChangeTrackingCollection<UserPermission> UserPermissionChangeTracker { get; set; }
-
     }
 }

@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -18,12 +7,9 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
-
     [Table("JobHistory")]
-
     public partial class JobHistory : EntityBase
     {
-
 		public int JobHistoryId
 		{ 
 			get { return _JobHistoryId; }
@@ -35,7 +21,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int _JobHistoryId;
-
 
 		public string Employer
 		{ 
@@ -49,7 +34,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Employer;
 
-
 		public string EmpAddress
 		{ 
 			get { return _EmpAddress; }
@@ -61,7 +45,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _EmpAddress;
-
 
 		public string JobTitle
 		{ 
@@ -75,7 +58,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _JobTitle;
 
-
 		public string ReasonLeaving
 		{ 
 			get { return _ReasonLeaving; }
@@ -87,7 +69,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _ReasonLeaving;
-
 
 		public DateTime? DateStarted
 		{ 
@@ -101,7 +82,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private DateTime? _DateStarted;
 
-
 		public DateTime? DateEnded
 		{ 
 			get { return _DateEnded; }
@@ -113,7 +93,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private DateTime? _DateEnded;
-
 
 		public int? Phone
 		{ 
@@ -127,7 +106,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _Phone;
 
-
 		public int? Superviser
 		{ 
 			get { return _Superviser; }
@@ -139,7 +117,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _Superviser;
-
 
 		public decimal? StartingSalary
 		{ 
@@ -153,7 +130,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private decimal? _StartingSalary;
 
-
 		public string Responsibilities
 		{ 
 			get { return _Responsibilities; }
@@ -166,7 +142,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Responsibilities;
 
-
 		public decimal? EndingSalary
 		{ 
 			get { return _EndingSalary; }
@@ -178,6 +153,5 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private decimal? _EndingSalary;
-
     }
 }

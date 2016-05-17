@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -18,12 +7,9 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
-
     [Table("Education")]
-
     public partial class Education : EntityBase
     {
-
 		public int EducationId
 		{ 
 			get { return _EducationId; }
@@ -35,7 +21,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int _EducationId;
-
 
 		public string SchoolName
 		{ 
@@ -49,7 +34,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _SchoolName;
 
-
 		public string SchoolAddress
 		{ 
 			get { return _SchoolAddress; }
@@ -61,7 +45,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _SchoolAddress;
-
 
 		public DateTime? TimeAttended
 		{ 
@@ -75,7 +58,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private DateTime? _TimeAttended;
 
-
 		public DateTime? TimeLeft
 		{ 
 			get { return _TimeLeft; }
@@ -87,7 +69,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private DateTime? _TimeLeft;
-
 
 		public bool? Graduated
 		{ 
@@ -101,7 +82,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool? _Graduated;
 
-
 		public string DegreeMajor
 		{ 
 			get { return _DegreeMajor; }
@@ -113,6 +93,5 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _DegreeMajor;
-
     }
 }

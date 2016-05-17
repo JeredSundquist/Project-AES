@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -18,18 +7,12 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
-
     [Table("AppliedPosition")]
-
     public partial class AppliedPosition : EntityBase
     {
-
         [Key]
-
         [Column(Order = 0)]
-
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-
 		public int UserId
 		{ 
 			get { return _UserId; }
@@ -42,13 +25,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _UserId;
 
-
         [Key]
-
         [Column(Order = 1)]
-
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-
 		public int PositionId
 		{ 
 			get { return _PositionId; }
@@ -61,7 +40,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _PositionId;
 
-
 		public int? TestScoreRecieved
 		{ 
 			get { return _TestScoreRecieved; }
@@ -73,7 +51,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _TestScoreRecieved;
-
 
 
 		public Position Position
@@ -90,6 +67,5 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private Position _Position;
 		private ChangeTrackingCollection<Position> PositionChangeTracker { get; set; }
-
     }
 }
