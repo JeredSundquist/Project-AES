@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -7,10 +18,14 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
+
     [Table("__RefactorLog")]
+
     public partial class C__RefactorLog : EntityBase
     {
+
         [Key]
+
 		public Guid OperationKey
 		{ 
 			get { return _OperationKey; }
@@ -22,5 +37,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private Guid _OperationKey;
+
     }
 }

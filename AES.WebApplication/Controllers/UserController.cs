@@ -22,6 +22,12 @@ namespace AES.WebApplication.Controllers
             return View(await users.ToListAsync());
         }
 
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         // GET: User/Details/5
         public async Task<ActionResult> Details(int? id)
         {

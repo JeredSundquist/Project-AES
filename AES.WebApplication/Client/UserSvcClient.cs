@@ -1,46 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using System.Web;
 using AES.Entities.Shared.Net45.Models;
 using WebApiRestService;
 
 namespace AES.WebApplication.Client
 {
-    public class AnswerSVCClient : WebApiClient<Answer>
+    public class UserSvcClient : WebApiClient<User>
     {
-        public static readonly WebApiClientOptions options = new WebApiClientOptions()
+        public new static readonly WebApiClientOptions Options = new WebApiClientOptions()
         {
-            BaseAddress = "http://localhost:" + "59095" + "/",
+            BaseAddress = "http://localhost:" + "53253" + "/",
             ContentType = ContentType.Json,
             Timeout = 80000,
-            Controller = "api/Answer"
+            Controller = "api/User"
         };
 
         /// <summary>
-        /// Creates an instance of AnswerClient using default options
+        /// Creates an instance of UserClient using default options
         /// </summary>
-        public AnswerSVCClient()
-            : this(options)
+        public UserSvcClient()
+            : this(Options)
         {
         }
 
         /// <summary>
-        /// Creates an instance of AnswerClient using explicit options
+        /// Creates an instance of UserClient using explicit options
         /// </summary>
-        private AnswerSVCClient(WebApiClientOptions options)
+        private UserSvcClient(WebApiClientOptions options)
             : base(options)
         {
         }
 
-        public async Task<IEnumerable<Answer>> GetAnswers()
+        public async Task<IEnumerable<User>> GetUsers()
         {
             return await GetManyAsync();
         }
 
-        public async Task<Answer> GetAnswerById(int? id)
+        public async Task<User> GetUserById(int? id)
         {
             if (id == null)
             {
@@ -61,17 +58,17 @@ namespace AES.WebApplication.Client
             }
         }
 
-        public async Task<Answer> CreateAnswer(Answer Answer)
+        public async Task<User> CreateUser(User user)
         {
-            return await CreateAsync(Answer);
+            return await CreateAsync(user);
         }
 
-        public async Task<Answer> EditAnswer(Answer Answer)
+        public async Task<User> EditUser(User user)
         {
-            return await EditAsync(Answer);
+            return await EditAsync(user);
         }
 
-        public async Task DeleteAnswer(int id)
+        public async Task DeleteUser(int id)
         {
             await DeleteAsync(id);
         }

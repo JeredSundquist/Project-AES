@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -7,9 +18,12 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
+
     [Table("Question")]
+
     public partial class Question : EntityBase
     {
+
 		public int QuestionId
 		{ 
 			get { return _QuestionId; }
@@ -22,7 +36,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _QuestionId;
 
+
         [Column("Question")]
+
 		public string Question1
 		{ 
 			get { return _Question1; }
@@ -35,7 +51,9 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Question1;
 
+
         [StringLength(10)]
+
 		public string QuestionText
 		{ 
 			get { return _QuestionText; }
@@ -48,6 +66,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _QuestionText;
 
+
 		public int? AnswerId
 		{ 
 			get { return _AnswerId; }
@@ -59,6 +78,7 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _AnswerId;
+
 
 
 		public Answer Answer
@@ -75,5 +95,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private Answer _Answer;
 		private ChangeTrackingCollection<Answer> AnswerChangeTracker { get; set; }
+
     }
 }
