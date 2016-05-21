@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -18,12 +7,9 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
-
     [Table("Reference")]
-
     public partial class Reference : EntityBase
     {
-
 		public int ReferenceId
 		{ 
 			get { return _ReferenceId; }
@@ -35,7 +21,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int _ReferenceId;
-
 
 		public string ReferenceName
 		{ 
@@ -49,7 +34,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _ReferenceName;
 
-
 		public int? ReferencePhone
 		{ 
 			get { return _ReferencePhone; }
@@ -61,7 +45,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _ReferencePhone;
-
 
 		public string ReferenceCompany
 		{ 
@@ -75,7 +58,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _ReferenceCompany;
 
-
 		public string ReferenceTitle
 		{ 
 			get { return _ReferenceTitle; }
@@ -87,6 +69,5 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _ReferenceTitle;
-
     }
 }

@@ -8,25 +8,17 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AES.Entities.Shared.Net45.Models;
-using AES.WebApplication.Client;
 
 namespace AES.WebApplication.Controllers
 {
     public class TestController : Controller
     {
-        public TestSvcClient Client { get; }
-
-        public TestController()
-        {
-            Client = new TestSvcClient();
-        }
+        private AESEntitiesModel db = new AESEntitiesModel();
 
         // GET: Test
         public async Task<ActionResult> Index()
         {
-            IEnumerable<Test> tests = await Client.GetTests();
-
-            return View(tests);
+            return View(await db.Tests.ToListAsync());
         }
 
         // GET: Test/Details/5
@@ -36,9 +28,7 @@ namespace AES.WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
-            Test test = await Client.GetTestById(id);
-
+            Test test = await db.Tests.FindAsync(id);
             if (test == null)
             {
                 return HttpNotFound();
@@ -57,13 +47,16 @@ namespace AES.WebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "TestId,QuestionName,QuestionList,passingScore")] Test test)
+        public async Task<ActionResult> Create([Bind(Include = "TestId,TestName,PositionId,QaId01,QaId02,QaId03,QaId04,QaId05,QaId06,QaId07,QaId08,QaId09,QaId10,QaId11,QaId12,QaId13,QaId14,QaId15,QaId16,QaId17,QaId18,QaId19,QaId20,QaId21,QaId22,QaId23,QaId24,QaId25,PassingScore,TotalScore")] Test test)
         {
-            if (!ModelState.IsValid) return View(test);
+            if (ModelState.IsValid)
+            {
+                db.Tests.Add(test);
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
 
-            await Client.CreateTest(test);
-
-            return RedirectToAction("Index");
+            return View(test);
         }
 
         // GET: Test/Edit/5
@@ -73,9 +66,7 @@ namespace AES.WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
-            Test test = await Client.GetTestById(id);
-
+            Test test = await db.Tests.FindAsync(id);
             if (test == null)
             {
                 return HttpNotFound();
@@ -88,16 +79,15 @@ namespace AES.WebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "TestId,QuestionName,QuestionList,passingScore")] Test test)
+        public async Task<ActionResult> Edit([Bind(Include = "TestId,PositionId,QaId01,QaId02,QaId03,QaId04,QaId05,QaId06,QaId07,QaId08,QaId09,QaId10,QaId11,QaId12,QaId13,QaId14,QaId15,QaId16,QaId17,QaId18,QaId19,QaId20,QaId21,QaId22,QaId23,QaId24,QaId25,PassingScore,TotalScore")] Test test)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return View(test);
+                db.Entry(test).State = EntityState.Modified;
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index");
             }
-
-            await Client.EditTest(test);
-
-            return RedirectToAction("Index");
+            return View(test);
         }
 
         // GET: Test/Delete/5
@@ -107,14 +97,11 @@ namespace AES.WebApplication.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
-            Test test = await Client.GetTestById(id);
-
+            Test test = await db.Tests.FindAsync(id);
             if (test == null)
             {
                 return HttpNotFound();
             }
-
             return View(test);
         }
 
@@ -123,10 +110,9 @@ namespace AES.WebApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Test test = await Client.GetTestById(id);
-
-            await Client.DeleteTest(id);
-
+            Test test = await db.Tests.FindAsync(id);
+            db.Tests.Remove(test);
+            await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
@@ -134,7 +120,7 @@ namespace AES.WebApplication.Controllers
         {
             if (disposing)
             {
-                Client.Dispose();
+                db.Dispose();
             }
             base.Dispose(disposing);
         }

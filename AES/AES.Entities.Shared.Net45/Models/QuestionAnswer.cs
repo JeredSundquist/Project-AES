@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -18,28 +7,21 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations.Schema;
 	using TrackableEntities.Client;
 
-
     [Table("QuestionAnswer")]
-
     public partial class QuestionAnswer : EntityBase
     {
-
-        [Key]
-
-        [Column(Order = 0)]
-
-		public int QuestionId
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+		public int QuestionAnswerId
 		{ 
-			get { return _QuestionId; }
+			get { return _QuestionAnswerId; }
 			set
 			{
-				if (Equals(value, _QuestionId)) return;
-				_QuestionId = value;
+				if (Equals(value, _QuestionAnswerId)) return;
+				_QuestionAnswerId = value;
 				NotifyPropertyChanged();
 			}
 		}
-		private int _QuestionId;
-
+		private int _QuestionAnswerId;
 
 		public string Question
 		{ 
@@ -53,11 +35,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _Question;
 
-
-        [Key]
-
-        [Column(Order = 1)]
-
 		public string MC_Possible_Answer_1
 		{ 
 			get { return _MC_Possible_Answer_1; }
@@ -69,11 +46,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _MC_Possible_Answer_1;
-
-
-        [Key]
-
-        [Column(Order = 2)]
 
 		public bool MC_Answer_1_Selected
 		{ 
@@ -87,7 +59,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _MC_Answer_1_Selected;
 
-
 		public string MC_Possible_Answer_2
 		{ 
 			get { return _MC_Possible_Answer_2; }
@@ -99,11 +70,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _MC_Possible_Answer_2;
-
-
-        [Key]
-
-        [Column(Order = 3)]
 
 		public bool MC_Answer_2_Selected
 		{ 
@@ -117,7 +83,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _MC_Answer_2_Selected;
 
-
 		public string MC_Possible_Answer_3
 		{ 
 			get { return _MC_Possible_Answer_3; }
@@ -129,11 +94,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _MC_Possible_Answer_3;
-
-
-        [Key]
-
-        [Column(Order = 4)]
 
 		public bool MC_Answer_3_Selected
 		{ 
@@ -147,7 +107,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _MC_Answer_3_Selected;
 
-
 		public string MC_Possible_Answer_4
 		{ 
 			get { return _MC_Possible_Answer_4; }
@@ -159,11 +118,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _MC_Possible_Answer_4;
-
-
-        [Key]
-
-        [Column(Order = 5)]
 
 		public bool MC_Answer_4_Selected
 		{ 
@@ -177,7 +131,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _MC_Answer_4_Selected;
 
-
 		public string MC_Possible_Answer_5
 		{ 
 			get { return _MC_Possible_Answer_5; }
@@ -189,11 +142,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private string _MC_Possible_Answer_5;
-
-
-        [Key]
-
-        [Column(Order = 6)]
 
 		public bool MC_Answer_5_Selected
 		{ 
@@ -207,7 +155,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _MC_Answer_5_Selected;
 
-
 		public int? MC_Answer_Num_Selected
 		{ 
 			get { return _MC_Answer_Num_Selected; }
@@ -219,7 +166,6 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private int? _MC_Answer_Num_Selected;
-
 
 		public int? MC_Correct_Answer_Num
 		{ 
@@ -233,11 +179,6 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int? _MC_Correct_Answer_Num;
 
-
-        [Key]
-
-        [Column(Order = 7)]
-
 		public bool TF_Answer
 		{ 
 			get { return _TF_Answer; }
@@ -250,22 +191,29 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private bool _TF_Answer;
 
-
-        [Key]
-
-        [Column(Order = 8)]
-
-		public string WA_ANSWER
+        [Required]
+		public string WI_Answer
 		{ 
-			get { return _WA_ANSWER; }
+			get { return _WI_Answer; }
 			set
 			{
-				if (Equals(value, _WA_ANSWER)) return;
-				_WA_ANSWER = value;
+				if (Equals(value, _WI_Answer)) return;
+				_WI_Answer = value;
 				NotifyPropertyChanged();
 			}
 		}
-		private string _WA_ANSWER;
+		private string _WI_Answer;
 
+		public int QuestionType
+		{ 
+			get { return _QuestionType; }
+			set
+			{
+				if (Equals(value, _QuestionType)) return;
+				_QuestionType = value;
+				NotifyPropertyChanged();
+			}
+		}
+		private int _QuestionType;
     }
 }

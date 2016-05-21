@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AESEntitiesModel.cs" />
-    <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\Application.cs" />
     <Compile Include="Models\AppliedPosition.cs" />
     <Compile Include="Models\C__RefactorLog.cs" />
@@ -76,7 +75,6 @@
     <Compile Include="Models\JobHistory.cs" />
     <Compile Include="Models\Position.cs" />
     <Compile Include="Models\PositionRequest.cs" />
-    <Compile Include="Models\Question.cs" />
     <Compile Include="Models\QuestionAnswer.cs" />
     <Compile Include="Models\Reference.cs" />
     <Compile Include="Models\Store.cs" />
@@ -86,7 +84,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="CodeTemplates\EFModelFromDatabase\Context.cs.t4" />
     <None Include="CodeTemplates\EFModelFromDatabase\EntityType.cs.t4" />
     <None Include="CodeTemplates\ReverseEngineerCodeFirst\Context.tt" />

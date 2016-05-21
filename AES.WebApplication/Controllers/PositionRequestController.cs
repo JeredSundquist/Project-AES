@@ -6,9 +6,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using AES.Entities.Shared.Net45.Models;
 using AES.WebApplication.Client;
 using System.Threading.Tasks;
+using AES.Entities.Shared.Net45.Models;
 
 namespace AES.WebApplication.Controllers
 {

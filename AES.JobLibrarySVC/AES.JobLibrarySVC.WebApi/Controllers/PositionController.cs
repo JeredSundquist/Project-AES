@@ -6,10 +6,10 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using AES.Entities.Shared.Net45.Models;
 using TrackableEntities;
 using TrackableEntities.EF6;
 using TrackableEntities.Common;
-using AES.Entities.Shared.Net45.Models;
 
 // NOTE: Primary key name and/or type may need to be set manually.
 
@@ -25,8 +25,8 @@ namespace AES.JobLibrarySVC.WebApi.Controllers
         {
             IEnumerable<Position> entities = await _dbContext.Positions
                 // TODO: Add Includes for reference and/or collection properties
-                .Include(s => s.Store) //<=== REMOVE?
-                .Include(t => t.Test) //<=== REMOVE?
+                .Include(s => s.Store)
+                .Include(t => t.Test)
                 .ToListAsync();
 
             return Ok(entities);

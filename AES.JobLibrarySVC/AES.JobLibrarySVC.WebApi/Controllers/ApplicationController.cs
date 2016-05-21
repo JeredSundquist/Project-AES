@@ -6,10 +6,10 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using AES.Entities.Shared.Net45.Models;
 using TrackableEntities;
 using TrackableEntities.EF6;
 using TrackableEntities.Common;
-using AES.Entities.Shared.Net45.Models;
 
 // NOTE: Primary key name and/or type may need to be set manually.
 

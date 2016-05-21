@@ -19,11 +19,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Test.QuestionList)
+            @Html.DisplayNameFor(model => model.Test.TestName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Test.QuestionList)
+            @Html.DisplayFor(model => model.Test.TestName)
         </dd>
 
         <dt>
@@ -45,6 +45,6 @@
     </dl>
 </div>
 <p>
-    @*@Html.ActionLink("Edit", "Edit", new { id = Model.PositionId }) |*@
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PositionId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
