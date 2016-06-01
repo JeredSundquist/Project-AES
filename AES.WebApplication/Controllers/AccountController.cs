@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using AES.WebApplication.Models;
+using AES.Entities.Shared.Net45;
 
 namespace AES.WebApplication.Controllers
 {

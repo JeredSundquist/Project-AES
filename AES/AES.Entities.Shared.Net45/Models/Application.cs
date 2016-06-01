@@ -10,6 +10,11 @@ namespace AES.Entities.Shared.Net45.Models
     [Table("Application")]
     public partial class Application : EntityBase
     {
+        public Application()
+        {
+            Users = new ChangeTrackingCollection<User>();
+        }
+
 		public int ApplicationId
 		{ 
 			get { return _ApplicationId; }
@@ -1028,5 +1033,17 @@ namespace AES.Entities.Shared.Net45.Models
 			}
 		}
 		private DateTime? _ApplicationDate;
+
+		public ChangeTrackingCollection<User> Users
+		{
+			get { return _Users; }
+			set
+			{
+				if (Equals(value, _Users)) return;
+				_Users = value;
+				NotifyPropertyChanged();
+			}
+		}
+		private ChangeTrackingCollection<User> _Users;
     }
 }

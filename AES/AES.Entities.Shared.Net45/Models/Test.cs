@@ -34,7 +34,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _TestName;
 
-        public int? PositionId
+		public int? PositionId
 		{ 
 			get { return _PositionId; }
 			set

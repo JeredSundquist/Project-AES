@@ -70,6 +70,11 @@
     <Compile Include="Models\AESEntitiesModel.cs" />
     <Compile Include="Models\Application.cs" />
     <Compile Include="Models\AppliedPosition.cs" />
+    <Compile Include="Models\AspNetRole.cs" />
+    <Compile Include="Models\AspNetUser.cs" />
+    <Compile Include="Models\AspNetUserClaim.cs" />
+    <Compile Include="Models\AspNetUserLogin.cs" />
+    <Compile Include="Models\C__MigrationHistory.cs" />
     <Compile Include="Models\C__RefactorLog.cs" />
     <Compile Include="Models\Education.cs" />
     <Compile Include="Models\JobHistory.cs" />
@@ -78,6 +83,7 @@
     <Compile Include="Models\QuestionAnswer.cs" />
     <Compile Include="Models\Reference.cs" />
     <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\Table.cs" />
     <Compile Include="Models\Test.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserPermission.cs" />

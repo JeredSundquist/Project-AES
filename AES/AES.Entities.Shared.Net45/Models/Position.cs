@@ -89,7 +89,8 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private ChangeTrackingCollection<AppliedPosition> _AppliedPositions;
 
-		public Store Store
+        // --- Store --- //
+        public Store Store
 		{
 			get { return _Store; }
 			set
@@ -104,6 +105,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private Store _Store;
 		private ChangeTrackingCollection<Store> StoreChangeTracker { get; set; }
 
+        // --- Test --- //
         public Test Test
         {
             get { return _Test; }
@@ -118,7 +120,6 @@ namespace AES.Entities.Shared.Net45.Models
         }
         private Test _Test;
         private ChangeTrackingCollection<Test> TestChangeTracker { get; set; }
-
 
     }
 }

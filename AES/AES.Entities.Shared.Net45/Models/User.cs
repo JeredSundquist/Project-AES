@@ -22,6 +22,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _UserId;
 
+        [Required]
 		public string UserName
 		{ 
 			get { return _UserName; }
@@ -34,6 +35,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _UserName;
 
+        [Required]
 		public string password
 		{ 
 			get { return _password; }
@@ -46,6 +48,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _password;
 
+        [Required]
 		public string email
 		{ 
 			get { return _email; }
@@ -58,32 +61,32 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private string _email;
 
-		public string Address
+		public int? FK_ApplicationId
 		{ 
-			get { return _Address; }
+			get { return _FK_ApplicationId; }
 			set
 			{
-				if (Equals(value, _Address)) return;
-				_Address = value;
+				if (Equals(value, _FK_ApplicationId)) return;
+				_FK_ApplicationId = value;
 				NotifyPropertyChanged();
 			}
 		}
-		private string _Address;
+		private int? _FK_ApplicationId;
 
 
-		public UserPermission UserPermission
+		public Application Application
 		{
-			get { return _UserPermission; }
+			get { return _Application; }
 			set
 			{
-				if (Equals(value, _UserPermission)) return;
-				_UserPermission = value;
-				UserPermissionChangeTracker = _UserPermission == null ? null
-					: new ChangeTrackingCollection<UserPermission> { _UserPermission };
+				if (Equals(value, _Application)) return;
+				_Application = value;
+				ApplicationChangeTracker = _Application == null ? null
+					: new ChangeTrackingCollection<Application> { _Application };
 				NotifyPropertyChanged();
 			}
 		}
-		private UserPermission _UserPermission;
-		private ChangeTrackingCollection<UserPermission> UserPermissionChangeTracker { get; set; }
+		private Application _Application;
+		private ChangeTrackingCollection<Application> ApplicationChangeTracker { get; set; }
     }
 }

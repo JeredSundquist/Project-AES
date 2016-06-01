@@ -11,8 +11,7 @@ namespace AES.Entities.Shared.Net45.Models
     public partial class UserPermission : EntityBase
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-		public int UserId
+		public string UserId
 		{ 
 			get { return _UserId; }
 			set
@@ -22,7 +21,7 @@ namespace AES.Entities.Shared.Net45.Models
 				NotifyPropertyChanged();
 			}
 		}
-		private int _UserId;
+		private string _UserId;
 
 		public bool editPosition
 		{ 
@@ -109,19 +108,19 @@ namespace AES.Entities.Shared.Net45.Models
 		private bool _viewTest;
 
 
-		public User User
+		public AspNetUser AspNetUser
 		{
-			get { return _User; }
+			get { return _AspNetUser; }
 			set
 			{
-				if (Equals(value, _User)) return;
-				_User = value;
-				UserChangeTracker = _User == null ? null
-					: new ChangeTrackingCollection<User> { _User };
+				if (Equals(value, _AspNetUser)) return;
+				_AspNetUser = value;
+				AspNetUserChangeTracker = _AspNetUser == null ? null
+					: new ChangeTrackingCollection<AspNetUser> { _AspNetUser };
 				NotifyPropertyChanged();
 			}
 		}
-		private User _User;
-		private ChangeTrackingCollection<User> UserChangeTracker { get; set; }
+		private AspNetUser _AspNetUser;
+		private ChangeTrackingCollection<AspNetUser> AspNetUserChangeTracker { get; set; }
     }
 }
