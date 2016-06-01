@@ -41,7 +41,9 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _Name;
 
         [StringLength(13)]
-		public string SSN
+        [Required(ErrorMessage = "SSN is Required")]
+        [RegularExpression(@"^\d{9}|\d{3}-\d{2}-\d{4}$", ErrorMessage = "Invalid Social Security Number")]
+        public string SSN
 		{ 
 			get { return _SSN; }
 			set
@@ -67,7 +69,11 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _Address;
 
         [StringLength(16)]
-		public string PhoneNumber
+        [Required(ErrorMessage = "Your must provide a PhoneNumber")]
+        [Display(Name = "Home Phone")]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid Phone number")]
+        public string PhoneNumber
 		{ 
 			get { return _PhoneNumber; }
 			set
@@ -80,7 +86,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _PhoneNumber;
 
         [StringLength(50)]
-		public string OtherName
+        public string OtherName
 		{ 
 			get { return _OtherName; }
 			set
@@ -93,7 +99,10 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _OtherName;
 
         [StringLength(50)]
-		public string Email
+        [Required(ErrorMessage = "Your must provide an Email Address")]
+        [Display(Name = "Email address")]
+        [EmailAddress(ErrorMessage = "Invalid Email Address")]
+        public string Email
 		{ 
 			get { return _Email; }
 			set
@@ -328,7 +337,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _MostRecentEmployerAddress;
 
         [StringLength(16)]
-		public string MostRecentEmployerPhone
+        public string MostRecentEmployerPhone
 		{ 
 			get { return _MostRecentEmployerPhone; }
 			set
@@ -341,7 +350,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _MostRecentEmployerPhone;
 
         [StringLength(15)]
-		public string MostRecentEmployerSupervisor
+        public string MostRecentEmployerSupervisor
 		{ 
 			get { return _MostRecentEmployerSupervisor; }
 			set
@@ -470,7 +479,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _MiddleRecentEmployerAddress;
 
         [StringLength(16)]
-		public string MiddleRecentEmployerPhone
+        public string MiddleRecentEmployerPhone
 		{ 
 			get { return _MiddleRecentEmployerPhone; }
 			set
@@ -483,7 +492,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _MiddleRecentEmployerPhone;
 
         [StringLength(20)]
-		public string MiddleRecentEmployerSupervisor
+        public string MiddleRecentEmployerSupervisor
 		{ 
 			get { return _MiddleRecentEmployerSupervisor; }
 			set
@@ -612,7 +621,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _LeastRecentEmployerAddress;
 
         [StringLength(16)]
-		public string LeastRecentEmployerPhone
+        public string LeastRecentEmployerPhone
 		{ 
 			get { return _LeastRecentEmployerPhone; }
 			set
@@ -625,7 +634,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _LeastRecentEmployerPhone;
 
         [StringLength(20)]
-		public string LeastRecentEmployerSupervisor
+        public string LeastRecentEmployerSupervisor
 		{ 
 			get { return _LeastRecentEmployerSupervisor; }
 			set
@@ -868,7 +877,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _Reference1Name;
 
         [StringLength(16)]
-		public string Reference1Phone
+        public string Reference1Phone
 		{ 
 			get { return _Reference1Phone; }
 			set
@@ -881,7 +890,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _Reference1Phone;
 
         [StringLength(20)]
-		public string Reference1Company
+        public string Reference1Company
 		{ 
 			get { return _Reference1Company; }
 			set
@@ -920,7 +929,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _Reference2Name;
 
         [StringLength(16)]
-		public string Reference2Phone
+        public string Reference2Phone
 		{ 
 			get { return _Reference2Phone; }
 			set
@@ -933,7 +942,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _Reference2Phone;
 
         [StringLength(20)]
-		public string Reference2Company
+        public string Reference2Company
 		{ 
 			get { return _Reference2Company; }
 			set
@@ -972,7 +981,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _Reference3Name;
 
         [StringLength(16)]
-		public string Reference3Phone
+        public string Reference3Phone
 		{ 
 			get { return _Reference3Phone; }
 			set
@@ -985,7 +994,7 @@ namespace AES.Entities.Shared.Net45.Models
 		private string _Reference3Phone;
 
         [StringLength(20)]
-		public string Reference3Company
+        public string Reference3Company
 		{ 
 			get { return _Reference3Company; }
 			set
