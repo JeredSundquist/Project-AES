@@ -225,6 +225,7 @@
     <Compile Include="Client\ApplicationSVCClient.cs" />
     <Compile Include="Client\PositionRequestSVCClient.cs" />
     <Compile Include="Client\PositionSVCClient.cs" />
+    <Compile Include="Client\QuestionAnswerSVCClient.cs" />
     <Compile Include="Client\StoreSVCClient.cs" />
     <Compile Include="Client\TestSVCClient.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -233,6 +234,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PositionController.cs" />
     <Compile Include="Controllers\PositionRequestController.cs" />
+    <Compile Include="Controllers\QuestionAnswerController.cs" />
     <Compile Include="Controllers\SplashController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\TestController.cs" />
@@ -354,6 +356,11 @@
     <Content Include="Views\Position\Edit.cshtml" />
     <Content Include="Views\Position\Index.cshtml" />
     <Content Include="Views\Splash\Index.cshtml" />
+    <Content Include="Views\QuestionAnswer\Create.cshtml" />
+    <Content Include="Views\QuestionAnswer\Delete.cshtml" />
+    <Content Include="Views\QuestionAnswer\Details.cshtml" />
+    <Content Include="Views\QuestionAnswer\Edit.cshtml" />
+    <Content Include="Views\QuestionAnswer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

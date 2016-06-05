@@ -1,0 +1,123 @@
+﻿@model IEnumerable<AES.Entities.Shared.Net45.Models.QuestionAnswer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Possible_Answer_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Answer_1_Selected)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Possible_Answer_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Answer_2_Selected)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Possible_Answer_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Answer_3_Selected)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Possible_Answer_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Answer_4_Selected)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Possible_Answer_5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Answer_5_Selected)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Answer_Num_Selected)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MC_Correct_Answer_Num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TF_Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WI_Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Possible_Answer_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Answer_1_Selected)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Possible_Answer_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Answer_2_Selected)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Possible_Answer_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Answer_3_Selected)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Possible_Answer_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Answer_4_Selected)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Possible_Answer_5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Answer_5_Selected)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Answer_Num_Selected)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MC_Correct_Answer_Num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TF_Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WI_Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuestionType)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.QuestionAnswerId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.QuestionAnswerId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.QuestionAnswerId })
+        </td>
+    </tr>
+}
+
+</table>
