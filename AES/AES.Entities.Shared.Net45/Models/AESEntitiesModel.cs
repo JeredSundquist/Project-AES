@@ -370,31 +370,39 @@ namespace AES.Entities.Shared.Net45.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<QuestionAnswer>()
-                .Property(e => e.Question)
+                .Property(e => e.QuestionText)
                 .IsUnicode(false);
 
             modelBuilder.Entity<QuestionAnswer>()
-                .Property(e => e.MC_Possible_Answer_1)
+                .Property(e => e.QuestionType)
                 .IsUnicode(false);
 
             modelBuilder.Entity<QuestionAnswer>()
-                .Property(e => e.MC_Possible_Answer_2)
+                .Property(e => e.MC_AnswerText1)
                 .IsUnicode(false);
 
             modelBuilder.Entity<QuestionAnswer>()
-                .Property(e => e.MC_Possible_Answer_3)
+                .Property(e => e.MC_AnswerText2)
                 .IsUnicode(false);
 
             modelBuilder.Entity<QuestionAnswer>()
-                .Property(e => e.MC_Possible_Answer_4)
+                .Property(e => e.MC_AnswerText3)
                 .IsUnicode(false);
 
             modelBuilder.Entity<QuestionAnswer>()
-                .Property(e => e.MC_Possible_Answer_5)
+                .Property(e => e.MC_AnswerText4)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<QuestionAnswer>()
+                .Property(e => e.MC_AnswerText5)
                 .IsUnicode(false);
 
             modelBuilder.Entity<QuestionAnswer>()
                 .Property(e => e.WI_Answer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<QuestionAnswer>()
+                .Property(e => e.CorrectAnswer)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Reference>()

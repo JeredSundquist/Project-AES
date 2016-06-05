@@ -356,6 +356,7 @@
     <Content Include="Views\Position\Edit.cshtml" />
     <Content Include="Views\Position\Index.cshtml" />
     <Content Include="Views\Splash\Index.cshtml" />
+    <Content Include="Views\UserQuestionnaire\UserQuestionnaire.cshtml" />
     <Content Include="Views\QuestionAnswer\Create.cshtml" />
     <Content Include="Views\QuestionAnswer\Delete.cshtml" />
     <Content Include="Views\QuestionAnswer\Details.cshtml" />

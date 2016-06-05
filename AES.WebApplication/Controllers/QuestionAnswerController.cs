@@ -20,16 +20,15 @@ namespace AES.WebApplication.Controllers
         {
             Client = new QuestionAnswerSvcClient();
         }
-
-        // GET: QuestionAnswers
+        // GET: QuestionAnswer
         public async Task<ActionResult> Index()
         {
-            IEnumerable<QuestionAnswer> questionAnswer = await Client.GetQuestionAnswers();
+            IEnumerable<QuestionAnswer> questionAnswers = await Client.GetQuestionAnswers();
 
-            return View(questionAnswer);
+            return View(questionAnswers);
         }
 
-        // GET: QuestionAnswers/Details/5
+        // GET: QuestionAnswer/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -46,37 +45,34 @@ namespace AES.WebApplication.Controllers
             return View(questionAnswer);
         }
 
-        // GET: QuestionAnswers/Create
+        // GET: QuestionAnswer/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: QuestionAnswers/Create
+        // POST: QuestionAnswer/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "QuestionAnswerId,Question,MC_Possible_Answer_1,MC_Answer_1_Selected,MC_Possible_Answer_2,MC_Answer_2_Selected,MC_Possible_Answer_3,MC_Answer_3_Selected,MC_Possible_Answer_4,MC_Answer_4_Selected,MC_Possible_Answer_5,MC_Answer_5_Selected,MC_Answer_Num_Selected,MC_Correct_Answer_Num,TF_Answer,WI_Answer,QuestionType")] QuestionAnswer questionAnswer)
+        public async Task<ActionResult> Create([Bind(Include = "QuestionAnswerId,QuestionText,QuestionType,MC_AnswerText1,MC_AnswerText2,MC_AnswerText3,MC_AnswerText4,MC_AnswerText5,WI_Answer,TrueFalse,CorrectAnswer")] QuestionAnswer questionAnswer)
         {
             if (!ModelState.IsValid) return View(questionAnswer);
-            {
-                await Client.CreateQuestionAnswer(questionAnswer);
 
-                return RedirectToAction("Index");
-            }
+            await Client.CreateQuestionAnswer(questionAnswer);
+
+            return RedirectToAction("Index");
         }
 
-        // GET: QuestionAnswers/Edit/5
+        // GET: QuestionAnswer/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
             QuestionAnswer questionAnswer = await Client.GetQuestionAnswerById(id);
-
             if (questionAnswer == null)
             {
                 return HttpNotFound();
@@ -84,22 +80,22 @@ namespace AES.WebApplication.Controllers
             return View(questionAnswer);
         }
 
-        // POST: QuestionAnswers/Edit/5
+        // POST: QuestionAnswer/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "QuestionAnswerId,Question,MC_Possible_Answer_1,MC_Answer_1_Selected,MC_Possible_Answer_2,MC_Answer_2_Selected,MC_Possible_Answer_3,MC_Answer_3_Selected,MC_Possible_Answer_4,MC_Answer_4_Selected,MC_Possible_Answer_5,MC_Answer_5_Selected,MC_Answer_Num_Selected,MC_Correct_Answer_Num,TF_Answer,WI_Answer,QuestionType")] QuestionAnswer questionAnswer)
+        public async Task<ActionResult> Edit([Bind(Include = "QuestionAnswerId,QuestionText,QuestionType,MC_AnswerText1,MC_AnswerText2,MC_AnswerText3,MC_AnswerText4,MC_AnswerText5,WI_Answer,TrueFalse,CorrectAnswer")] QuestionAnswer questionAnswer)
         {
             if (!ModelState.IsValid) return View(questionAnswer);
-            {
-                await Client.EditQuestionAnswer(questionAnswer);
 
-                return RedirectToAction("Index");
-            }
+            await Client.EditQuestionAnswer(questionAnswer);
+
+            return RedirectToAction("Index");
         }
 
-        // GET: QuestionAnswers/Delete/5
+
+        // GET: QuestionAnswer/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
@@ -107,7 +103,6 @@ namespace AES.WebApplication.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             QuestionAnswer questionAnswer = await Client.GetQuestionAnswerById(id);
-
             if (questionAnswer == null)
             {
                 return HttpNotFound();
@@ -115,7 +110,7 @@ namespace AES.WebApplication.Controllers
             return View(questionAnswer);
         }
 
-        // POST: QuestionAnswers/Delete/5
+        // POST: QuestionAnswer/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
