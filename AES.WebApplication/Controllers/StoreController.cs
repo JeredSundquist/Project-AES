@@ -58,7 +58,6 @@ namespace AES.WebApplication.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([Bind(Include = "StoreId,StoreLocation,StoreName")] Store store)
-
         {
             if (!ModelState.IsValid) return View(store);
 
