@@ -70,7 +70,7 @@ namespace AES.Entities.Shared.Net45.Models
 
         [StringLength(16)]
         [Required(ErrorMessage = "Your must provide a PhoneNumber")]
-        [Display(Name = "Home Phone")]
+        [Display(Name = "Phone")]
         [DataType(DataType.PhoneNumber)]
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid Phone number")]
         public string PhoneNumber
@@ -100,7 +100,7 @@ namespace AES.Entities.Shared.Net45.Models
 
         [StringLength(50)]
         [Required(ErrorMessage = "Your must provide an Email Address")]
-        [Display(Name = "Email address")]
+        [Display(Name = "Email")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email
         {
@@ -200,6 +200,7 @@ namespace AES.Entities.Shared.Net45.Models
         }
         private bool _Weekends;
 
+        [Display(Name = "Monday")]
         public bool MondayAvailable
         {
             get { return _MondayAvailable; }
@@ -212,6 +213,7 @@ namespace AES.Entities.Shared.Net45.Models
         }
         private bool _MondayAvailable;
 
+        [Display(Name = "Tuesday")]
         public bool TuesdayAvailable
         {
             get { return _TuesdayAvailable; }
@@ -224,6 +226,7 @@ namespace AES.Entities.Shared.Net45.Models
         }
         private bool _TuesdayAvailable;
 
+        [Display(Name = "Wednesday")]
         public bool WednesdayAvailable
         {
             get { return _WednesdayAvailable; }
@@ -233,9 +236,10 @@ namespace AES.Entities.Shared.Net45.Models
                 _WednesdayAvailable = value;
                 NotifyPropertyChanged();
             }
-        }
+        }      
         private bool _WednesdayAvailable;
 
+        [Display(Name = "Thursday")]
         public bool ThursdayAvailable
         {
             get { return _ThursdayAvailable; }
@@ -248,6 +252,7 @@ namespace AES.Entities.Shared.Net45.Models
         }
         private bool _ThursdayAvailable;
 
+        [Display(Name = "Friday")]
         public bool FridayAvailable
         {
             get { return _FridayAvailable; }
@@ -260,6 +265,7 @@ namespace AES.Entities.Shared.Net45.Models
         }
         private bool _FridayAvailable;
 
+        [Display(Name = "Saturday")]
         public bool SaturdayAvailable
         {
             get { return _SaturdayAvailable; }
@@ -272,6 +278,7 @@ namespace AES.Entities.Shared.Net45.Models
         }
         private bool _SaturdayAvailable;
 
+        [Display(Name = "Sunday")]
         public bool SundayAvailable
         {
             get { return _SundayAvailable; }

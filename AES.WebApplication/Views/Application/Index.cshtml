@@ -39,6 +39,18 @@
             @Html.DisplayNameFor(model => model.FullTime)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.PartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Days)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Evenings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weekends)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.MondayAvailable)
         </th>
         <th>
@@ -231,6 +243,9 @@
             @Html.DisplayNameFor(model => model.Reference3Title)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.HiringManagerNotes)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.ApplicationDate)
         </th>
         <th></th>
@@ -264,6 +279,18 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FullTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Days)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Evenings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weekends)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.MondayAvailable)
@@ -456,6 +483,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Reference3Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HiringManagerNotes)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ApplicationDate)

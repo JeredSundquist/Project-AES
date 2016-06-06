@@ -2,6 +2,7 @@
 using System.Net;
 using System.Threading.Tasks;
 using AES.Entities.Shared.Net45.Models;
+using AES.JobLibrarySVC;
 using WebApiRestService;
 
 namespace AES.WebApplication.Client

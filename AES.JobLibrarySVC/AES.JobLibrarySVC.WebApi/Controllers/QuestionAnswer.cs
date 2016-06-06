@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Web.UI.WebControls;
 using AES.Entities.Shared.Net45.Models;
 using TrackableEntities;
 using TrackableEntities.EF6;
@@ -29,6 +30,46 @@ namespace AES.JobLibrarySVC.WebApi.Controllers
 
             return Ok(entities);
         }
+
+        /*[ResponseType(typeof(Questionnaire))]
+        public async Task<IHttpActionResult> GetQuestionnaire(int Id)
+        {
+            IEnumerable<QuestionAnswer> entities = await _dbContext.QuestionAnswers
+                // TODO: Add Includes for reference and/or collection properties
+                .ToListAsync();
+
+            Test testEntity = _dbContext.Tests.Where(x => x.PositionId == Id).FirstOrDefault();
+            List<QuestionAnswer> QAList = new List<QuestionAnswer>();
+
+            QAList.Add(_dbContext.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId01.Value).FirstOrDefault());
+            QAList.Add(_dbContext.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId02.Value).FirstOrDefault());
+            QAList.Add(_dbContext.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId03.Value).FirstOrDefault());
+            QAList.Add(_dbContext.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId04.Value).FirstOrDefault());
+            QAList.Add(_dbContext.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId05.Value).FirstOrDefault());
+            // enter remaining 20 questions here
+
+            Questionnaire questionnaire =  new Questionnaire();
+            foreach (var item in QAList)
+            {
+                Question question = new Question();
+                question.type = item.QuestionType;
+                question.Title = item.QuestionText;
+                question.correctAnswer = item.CorrectAnswer;
+                
+                // 1-> 5 are 's'
+                question.answerList.Add(new Answer(item.MC_AnswerText1, "1"));
+                question.answerList.Add(new Answer(item.MC_AnswerText2, "2"));
+                question.answerList.Add(new Answer(item.MC_AnswerText3, "3"));
+                question.answerList.Add(new Answer(item.MC_AnswerText4, "4"));
+                question.answerList.Add(new Answer(item.MC_AnswerText5, "5"));
+
+                questionnaire.questionList.Add(question);
+            }
+            
+            return Ok(questionnaire);
+        }*/
+
+
 
         // GET api/QuestionAnswer/5
         [ResponseType(typeof(QuestionAnswer))]
