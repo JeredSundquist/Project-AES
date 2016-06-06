@@ -235,7 +235,6 @@
     <Compile Include="Controllers\PositionController.cs" />
     <Compile Include="Controllers\PositionRequestController.cs" />
     <Compile Include="Controllers\QuestionAnswerController.cs" />
-    <Compile Include="Controllers\SplashController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\UserPermissionController.cs" />
@@ -354,7 +353,6 @@
     <Content Include="Views\Position\Details.cshtml" />
     <Content Include="Views\Position\Edit.cshtml" />
     <Content Include="Views\Position\Index.cshtml" />
-    <Content Include="Views\Splash\Index.cshtml" />
     <Content Include="Views\QuestionAnswer\Create.cshtml" />
     <Content Include="Views\QuestionAnswer\Delete.cshtml" />
     <Content Include="Views\QuestionAnswer\Details.cshtml" />
