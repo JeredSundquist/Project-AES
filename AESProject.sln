@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.PositionRequestSVC.WebA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.SecuritySVC.WebApi", "AES.SecuritySVC\AES.SecuritySVC.WebApi\AES.SecuritySVC.WebApi.csproj", "{788971B0-9929-43FE-9BA2-822BA69D14D0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{218D1606-6C94-4D3C-A815-92C7B33508AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

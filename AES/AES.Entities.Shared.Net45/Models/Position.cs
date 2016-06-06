@@ -1,3 +1,5 @@
+using System.Runtime.Serialization;
+
 namespace AES.Entities.Shared.Net45.Models
 {
     using System;
@@ -6,6 +8,7 @@ namespace AES.Entities.Shared.Net45.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using TrackableEntities.Client;
+    using System.ComponentModel.DataAnnotations;
 
     [Table("Position")]
     public partial class Position : EntityBase
@@ -28,6 +31,7 @@ namespace AES.Entities.Shared.Net45.Models
         private int _PositionId;
 
         [Required]
+        [Display(Name = "Postition")]
         public string PositionName
         {
             get { return _PositionName; }
