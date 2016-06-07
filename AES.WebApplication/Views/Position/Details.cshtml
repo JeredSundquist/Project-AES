@@ -47,4 +47,7 @@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.PositionId }) |
     @Html.ActionLink("Back to List", "Index")
+    <div>
+        <button>@Html.ActionLink("Apply", "Create", "Application", new {id = Model.PositionId}, null)</button>
+    </div>
 </p>
