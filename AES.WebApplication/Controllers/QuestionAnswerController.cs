@@ -123,53 +123,14 @@ namespace AES.WebApplication.Controllers
             return RedirectToAction("Index");
         }
 
-        /*
-        [ResponseType(typeof(Questionnaire))]
-        public async Task<IHttpActionResult> GetQuestionnaire(int Id)
-        {
-            IEnumerable<QuestionAnswer> entities = await _dbContext.QuestionAnswers
-                // TODO: Add Includes for reference and/or collection properties
-                .ToListAsync();
-
-            Test testEntity = _dbContext.Tests.Where(x => x.PositionId == Id).FirstOrDefault();
-            List<QuestionAnswer> QAList = new List<QuestionAnswer>();
-
-            QAList.Add(_dbContext.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId01.Value).FirstOrDefault());
-            QAList.Add(_dbContext.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId02.Value).FirstOrDefault());
-            QAList.Add(_dbContext.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId03.Value).FirstOrDefault());
-            QAList.Add(_dbContext.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId04.Value).FirstOrDefault());
-            QAList.Add(_dbContext.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId05.Value).FirstOrDefault());
-            // enter remaining 20 questions here
-
-            Questionnaire questionnaire = new Questionnaire();
-            foreach (var item in QAList)
-            {
-                Question question = new Question();
-                question.type = item.QuestionType;
-                question.Title = item.QuestionText;
-                question.correctAnswer = item.CorrectAnswer;
-
-                // 1-> 5 are 's'
-                question.answerList.Add(new Answer(item.MC_AnswerText1, "1"));
-                question.answerList.Add(new Answer(item.MC_AnswerText2, "2"));
-                question.answerList.Add(new Answer(item.MC_AnswerText3, "3"));
-                question.answerList.Add(new Answer(item.MC_AnswerText4, "4"));
-                question.answerList.Add(new Answer(item.MC_AnswerText5, "5"));
-
-                questionnaire.questionList.Add(question);
-            }
-
-            return Ok(questionnaire);
-        }*/
-
         public async Task<ActionResult> GetQuestionnaire()
         {
-            int id = 2;
+            int id = 5;
             IEnumerable<QuestionAnswer> entities = await db.QuestionAnswers
                  // TODO: Add Includes for reference and/or collection properties
                  .ToListAsync();
 
-            Test testEntity = db.Tests.Where(x => x.PositionId == id).FirstOrDefault();
+            Test testEntity = db.Tests.Where(x => x.TestId == id).FirstOrDefault();
             List<QuestionAnswer> QAList = new List<QuestionAnswer>();
 
             QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId01.Value).FirstOrDefault());
@@ -177,24 +138,61 @@ namespace AES.WebApplication.Controllers
             QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId03.Value).FirstOrDefault());
             QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId04.Value).FirstOrDefault());
             QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId05.Value).FirstOrDefault());
-            // enter remaining 20 questions here
+
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId06.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId07.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId08.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId09.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId10.Value).FirstOrDefault());
+
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId11.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId12.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId13.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId14.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId15.Value).FirstOrDefault());
+
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId16.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId17.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId18.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId19.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId20.Value).FirstOrDefault());
+
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId21.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId22.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId23.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId24.Value).FirstOrDefault());
+            QAList.Add(db.QuestionAnswers.Where(x => x.QuestionAnswerId == testEntity.QaId25.Value).FirstOrDefault());        
 
             Questionnaire questionnaire = new Questionnaire();
             foreach (var item in QAList)
             {
-                Question question = new Question();
-                question.type = item.QuestionType;
-                question.Title = item.QuestionText;
-                question.correctAnswer = item.CorrectAnswer;
-
-                // 1-> 5 are 's'
-                question.answerList.Add(new Answer(item.MC_AnswerText1, "1"));
-                question.answerList.Add(new Answer(item.MC_AnswerText2, "2"));
-                question.answerList.Add(new Answer(item.MC_AnswerText3, "3"));
-                question.answerList.Add(new Answer(item.MC_AnswerText4, "4"));
-                question.answerList.Add(new Answer(item.MC_AnswerText5, "5"));
-
-                questionnaire.questionList.Add(question);
+                if(item != null)
+                { 
+                    Question question = new Question();
+                    question.type = item.QuestionType;
+                    question.Title = item.QuestionText;
+                    question.correctAnswer = item.CorrectAnswer;
+               
+                    // 1-> 5 are 's'
+                    if (question.type == "M")
+                    { 
+                        question.answerList.Add(new Answer(item.MC_AnswerText1, "1) "));
+                        question.answerList.Add(new Answer(item.MC_AnswerText2, "2) "));
+                        question.answerList.Add(new Answer(item.MC_AnswerText3, "3) "));
+                        question.answerList.Add(new Answer(item.MC_AnswerText4, "4) "));
+                        question.answerList.Add(new Answer(item.MC_AnswerText5, "5) "));
+                    }
+                    else if(question.type == "T")
+                    {
+                        question.answerList.Add(new Answer("", "1) True"));
+                        question.answerList.Add(new Answer("", "2) False"));
+                    }
+                    else if(question.type == "W")
+                    {
+                        question.answerList.Add(new Answer("", "Please Explain your answer."));
+                    }
+                    questionnaire.questionList.Add(question);
+                }
             }
 
             return View(questionnaire);
