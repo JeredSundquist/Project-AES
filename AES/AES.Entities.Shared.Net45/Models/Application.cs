@@ -127,6 +127,18 @@ namespace AES.Entities.Shared.Net45.Models
         }
         private string _PositionsApplied;
 
+        public int PositionId
+        {
+            get { return _PositionId; }
+            set
+            {
+                if (Equals(value, _PositionId)) return;
+                _PositionId = value;
+                NotifyPropertyChanged();
+            }
+        }
+        private int _PositionId;
+
         [StringLength(16)]
         [Display(Name="Salary Expectation")]
         public string SalaryExpectation

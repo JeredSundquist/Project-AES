@@ -52,8 +52,10 @@
         </div>
         <hr />
     <br/>
-        
-        @* ------------------------------ Position Applied ------------------------------ *@
+
+    @* ------------------------------ Position Applied ------------------------------ *@
+        <h1>@ViewData["PositionName"]</h1>
+        <h1>@ViewData["PositionId"]</h1>
     <div class="form-group">
         @Html.LabelFor(model => model.PositionsApplied, htmlAttributes: new {@class = "control-label col-md-2"})
         <div class="col-md-6">
@@ -61,7 +63,8 @@
             @Html.ValidationMessageFor(model => model.PositionsApplied, "", new {@class = "text-danger"})
         </div>
     </div>
-        <hr/>
+    <hr/>
+        @Html.Hidden("PositionId", @ViewData["PositionId"])
 
         
     @* ------------------------------ Times Available ------------------------------ *@
