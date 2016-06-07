@@ -55,6 +55,7 @@
         
         @* ------------------------------ Position Applied ------------------------------ *@
     <div class="form-group">
+        @*<h1>@ViewData["id"]</h1>*@
         @Html.LabelFor(model => model.PositionsApplied, htmlAttributes: new {@class = "control-label col-md-2"})
         <div class="col-md-6">
             @Html.EditorFor(model => model.PositionsApplied, new {htmlAttributes = new {@class = "form-control"}})

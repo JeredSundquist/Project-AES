@@ -128,7 +128,7 @@ namespace AES.Entities.Shared.Net45.Models
         private string _PositionsApplied;
 
         [StringLength(16)]
-        [Display(Name="Salary Expectation")]
+        [Display(Name = "Salary Expectation")]
         public string SalaryExpectation
         {
             get { return _SalaryExpectation; }
@@ -237,7 +237,7 @@ namespace AES.Entities.Shared.Net45.Models
                 _WednesdayAvailable = value;
                 NotifyPropertyChanged();
             }
-        }      
+        }
         private bool _WednesdayAvailable;
 
         [Display(Name = "Thursday")]
@@ -1096,7 +1096,7 @@ namespace AES.Entities.Shared.Net45.Models
             }
         }
         private string _HiringManagerNotes;
-        
+
         public DateTime? ApplicationDate
         {
             get { return _ApplicationDate; }
@@ -1120,5 +1120,18 @@ namespace AES.Entities.Shared.Net45.Models
             }
         }
         private ChangeTrackingCollection<User> _Users;
+
+        //FOR .INCLUDE in Application model
+        public int PositionId
+        {
+            get { return _PositionId; }
+            set
+            {
+                if (Equals(value, _PositionId)) return;
+                _PositionId = value;
+                NotifyPropertyChanged();
+            }
+        }
+        private int _PositionId;
     }
 }

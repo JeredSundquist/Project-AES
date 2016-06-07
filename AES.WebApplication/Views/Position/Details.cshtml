@@ -8,7 +8,7 @@
 
 <div>
     <h4>Position</h4>
-    <hr />
+    <hr/>
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Store.StoreLocation)
@@ -45,6 +45,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PositionId }) |
+    @Html.ActionLink("Edit", "Edit", new {id = Model.PositionId}) |
     @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Apply", "Create", "Application", new {id = Model.PositionId}, null)
 </p>
