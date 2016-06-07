@@ -4,13 +4,17 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Questions</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<hr />
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionAnswerId)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.QuestionText)
         </th>
@@ -32,12 +36,14 @@
         <th>
             @Html.DisplayNameFor(model => model.MC_AnswerText5)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WI_Answer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TrueFalse)
-        </th>
+        @*
+    <th>
+        @Html.DisplayNameFor(model => model.WI_Answer)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.TrueFalse)
+    </th>
+        *@
         <th>
             @Html.DisplayNameFor(model => model.CorrectAnswer)
         </th>
@@ -46,6 +52,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuestionAnswerId)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.QuestionText)
         </td>
@@ -67,17 +76,19 @@
         <td>
             @Html.DisplayFor(modelItem => item.MC_AnswerText5)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WI_Answer)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TrueFalse)
-        </td>
+        @*
+    <td>
+        @Html.DisplayFor(modelItem => item.WI_Answer)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TrueFalse)
+    </td>
+        *@
         <td>
             @Html.DisplayFor(modelItem => item.CorrectAnswer)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.QuestionAnswerId }) |
+            @* @Html.ActionLink("Edit", "Edit", new { id=item.QuestionAnswerId }) | *@
             @Html.ActionLink("Details", "Details", new { id=item.QuestionAnswerId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.QuestionAnswerId })
         </td>

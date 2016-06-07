@@ -4,8 +4,8 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2>Position Request</h2>
+<hr />
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -77,7 +77,7 @@
             @Html.DisplayFor(modelItem => item.DateApproved)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RequestId }) |
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.RequestId }) |*@
             @Html.ActionLink("Details", "Details", new { id=item.RequestId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.RequestId })
         </td>

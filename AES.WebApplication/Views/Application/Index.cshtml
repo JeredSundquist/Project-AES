@@ -4,11 +4,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2>Applicant Overview</h2>
+@*
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+    *@
+<hr />
 <table class="table">
     <tr>
         <th>
@@ -24,11 +26,9 @@
             @Html.DisplayNameFor(model => model.PhoneNumber)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.OtherName)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Email)
         </th>
+        @*
         <th>
             @Html.DisplayNameFor(model => model.PositionsApplied)
         </th>
@@ -245,12 +245,15 @@
         <th>
             @Html.DisplayNameFor(model => model.Reference3Title)
         </th>
+            *@
         <th>
             @Html.DisplayNameFor(model => model.HiringManagerNotes)
         </th>
+        @*
         <th>
             @Html.DisplayNameFor(model => model.ApplicationDate)
         </th>
+            *@
         <th></th>
     </tr>
 
@@ -269,11 +272,9 @@
             @Html.DisplayFor(modelItem => item.PhoneNumber)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.OtherName)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Email)
         </td>
+        @*
         <td>
             @Html.DisplayFor(modelItem => item.PositionsApplied)
         </td>
@@ -487,14 +488,13 @@
         <td>
             @Html.DisplayFor(modelItem => item.Reference3Title)
         </td>
+            *@
         <td>
             @Html.DisplayFor(modelItem => item.HiringManagerNotes)
         </td>
+
         <td>
-            @Html.DisplayFor(modelItem => item.ApplicationDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ApplicationId }) |
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.ApplicationId }) |*@
             @Html.ActionLink("Details", "Details", new { id=item.ApplicationId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ApplicationId })
         </td>

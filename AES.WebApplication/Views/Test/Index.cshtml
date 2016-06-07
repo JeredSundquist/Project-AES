@@ -4,15 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2>Existing Questionnaires</h2>
+<hr />
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.PositionId)
+            @Html.DisplayNameFor(model => model.TestId)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.QaId01)
@@ -101,7 +101,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.PositionId)
+            @Html.DisplayFor(modelItem => item.TestId)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.QaId01)
@@ -185,7 +185,7 @@
             @Html.DisplayFor(modelItem => item.TotalScore)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TestId }) |
+            @* @Html.ActionLink("Edit", "Edit", new { id=item.TestId }) |*@
             @Html.ActionLink("Details", "Details", new { id=item.TestId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.TestId })
         </td>
