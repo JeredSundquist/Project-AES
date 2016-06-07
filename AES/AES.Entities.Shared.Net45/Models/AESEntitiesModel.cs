@@ -18,32 +18,42 @@ namespace AES.Entities.Shared.Net45.Models
             Configuration.ProxyCreationEnabled = false;
         }
 
+        public DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public DbSet<C__RefactorLog> C__RefactorLog { get; set; }
-        public DbSet<Answer> Answers { get; set; }
         public DbSet<Application> Applications { get; set; }
         public DbSet<AppliedPosition> AppliedPositions { get; set; }
+        public DbSet<AspNetRole> AspNetRoles { get; set; }
+        public DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public DbSet<AspNetUser> AspNetUsers { get; set; }
         public DbSet<Education> Educations { get; set; }
         public DbSet<JobHistory> JobHistories { get; set; }
         public DbSet<Position> Positions { get; set; }
-        public DbSet<Question> Questions { get; set; }
+        public DbSet<PositionRequest> PositionRequests { get; set; }
+        public DbSet<QuestionAnswer> QuestionAnswers { get; set; }
         public DbSet<Reference> References { get; set; }
         public DbSet<Store> Stores { get; set; }
+        public DbSet<Table> Tables { get; set; }
         public DbSet<Test> Tests { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserPermission> UserPermissions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Answer>()
-                .Property(e => e.CorrectAnswer)
-                .IsUnicode(false);
-
             modelBuilder.Entity<Application>()
                 .Property(e => e.Name)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.SSN)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.Address)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.PhoneNumber)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
@@ -60,14 +70,26 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.SalaryExpectation)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.MostRecentEmployerFromDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.MostRecentEmployerToDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerAddress)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.MostRecentEmployerPhone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
@@ -80,11 +102,11 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerStartSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerEndSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MostRecentEmployerReasonForLeaving)
@@ -99,7 +121,19 @@ namespace AES.Entities.Shared.Net45.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.MiddleRecentEmployerFromDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.MiddleRecentEmployerToDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.MiddleRecentEmployerAddress)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.MiddleRecentEmployerPhone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
@@ -112,11 +146,11 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MiddleRecentEmployerStartSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MiddleRecentEmployerEndSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.MiddleRecentEmployerReasonForLeaving)
@@ -131,7 +165,19 @@ namespace AES.Entities.Shared.Net45.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.LeastRecentEmployerFromDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.LeastRecentEmployerToDate)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.LeastRecentEmployerAddress)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.LeastRecentEmployerPhone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
@@ -144,11 +190,11 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.LeastRecentEmployerStartSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.LeastRecentEmployerEndSalary)
-                .HasPrecision(19, 4);
+                .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.LeastRecentEmployerReasonForLeaving)
@@ -199,6 +245,10 @@ namespace AES.Entities.Shared.Net45.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.Reference1Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.Reference1Company)
                 .IsUnicode(false);
 
@@ -208,6 +258,10 @@ namespace AES.Entities.Shared.Net45.Models
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.Reference2Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.Reference2Phone)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
@@ -223,12 +277,44 @@ namespace AES.Entities.Shared.Net45.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
+                .Property(e => e.Reference3Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
                 .Property(e => e.Reference3Company)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Application>()
                 .Property(e => e.Reference3Title)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .Property(e => e.HiringManagerNotes)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Application>()
+                .HasMany(e => e.Users)
+                .WithOptional(e => e.Application)
+                .HasForeignKey(e => e.FK_ApplicationId);
+
+            modelBuilder.Entity<AspNetRole>()
+                .HasMany(e => e.AspNetUsers)
+                .WithMany(e => e.AspNetRoles)
+                .Map(m => m.ToTable("AspNetUserRoles").MapLeftKey("RoleId").MapRightKey("UserId"));
+
+            modelBuilder.Entity<AspNetUser>()
+                .HasMany(e => e.AspNetUserClaims)
+                .WithRequired(e => e.AspNetUser)
+                .HasForeignKey(e => e.UserId);
+
+            modelBuilder.Entity<AspNetUser>()
+                .HasMany(e => e.AspNetUserLogins)
+                .WithRequired(e => e.AspNetUser)
+                .HasForeignKey(e => e.UserId);
+
+            modelBuilder.Entity<AspNetUser>()
+                .HasOptional(e => e.UserPermission)
+                .WithRequired(e => e.AspNetUser);
 
             modelBuilder.Entity<Education>()
                 .Property(e => e.SchoolName)
@@ -283,13 +369,41 @@ namespace AES.Entities.Shared.Net45.Models
                 .WithRequired(e => e.Position)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Question>()
-                .Property(e => e.Question1)
+            modelBuilder.Entity<QuestionAnswer>()
+                .Property(e => e.QuestionText)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Question>()
-                .Property(e => e.QuestionText)
-                .IsFixedLength();
+            modelBuilder.Entity<QuestionAnswer>()
+                .Property(e => e.QuestionType)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<QuestionAnswer>()
+                .Property(e => e.MC_AnswerText1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<QuestionAnswer>()
+                .Property(e => e.MC_AnswerText2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<QuestionAnswer>()
+                .Property(e => e.MC_AnswerText3)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<QuestionAnswer>()
+                .Property(e => e.MC_AnswerText4)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<QuestionAnswer>()
+                .Property(e => e.MC_AnswerText5)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<QuestionAnswer>()
+                .Property(e => e.WI_Answer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<QuestionAnswer>()
+                .Property(e => e.CorrectAnswer)
+                .IsUnicode(false);
 
             modelBuilder.Entity<Reference>()
                 .Property(e => e.ReferenceName)
@@ -312,11 +426,7 @@ namespace AES.Entities.Shared.Net45.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Test>()
-                .Property(e => e.QuestionList)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Test>()
-                .Property(e => e.QuestionName)
+                .Property(e => e.TestName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
@@ -330,14 +440,6 @@ namespace AES.Entities.Shared.Net45.Models
             modelBuilder.Entity<User>()
                 .Property(e => e.email)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<User>()
-                .Property(e => e.Address)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<User>()
-                .HasOptional(e => e.UserPermission)
-                .WithRequired(e => e.User);
 
             ModelCreating(modelBuilder);
         }

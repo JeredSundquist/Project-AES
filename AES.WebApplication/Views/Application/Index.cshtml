@@ -10,33 +10,47 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SSN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OtherName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PositionsApplied)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SalaryExpectation)
-        </th>
+<tr>
+    <th>
+        @Html.DisplayNameFor(model => model.ApplicationDate)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.PositionsApplied)
+    </th>
+<th>
+    @Html.DisplayNameFor(model => model.Name)
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.SSN)
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.Address)
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.PhoneNumber)
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.Email)
+</th>
+
+<th>
+    @Html.DisplayNameFor(model => model.SalaryExpectation)
+</th>
+@*
         <th>
             @Html.DisplayNameFor(model => model.FullTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Days)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Evenings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weekends)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.MondayAvailable)
@@ -230,40 +244,58 @@
         <th>
             @Html.DisplayNameFor(model => model.Reference3Title)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ApplicationDate)
-        </th>
-        <th></th>
-    </tr>
+        *@
+<th>
+    @Html.DisplayNameFor(model => model.HiringManagerNotes)
+</th>
+
+<th></th>
+</tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SSN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OtherName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ApplicationDate)
+    </td>
         <td>
             @Html.DisplayFor(modelItem => item.PositionsApplied)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SalaryExpectation)
-        </td>
+
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SSN)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Address)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PhoneNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.SalaryExpectation)
+    </td>
+    @*
         <td>
             @Html.DisplayFor(modelItem => item.FullTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Days)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Evenings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weekends)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.MondayAvailable)
@@ -457,14 +489,15 @@
         <td>
             @Html.DisplayFor(modelItem => item.Reference3Title)
         </td>
+        *@
         <td>
-            @Html.DisplayFor(modelItem => item.ApplicationDate)
+            @Html.DisplayFor(modelItem => item.HiringManagerNotes)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ApplicationId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ApplicationId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ApplicationId })
-        </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new {id = item.ApplicationId}) |
+        @Html.ActionLink("Details", "Details", new {id = item.ApplicationId}) |
+        @Html.ActionLink("Delete", "Delete", new {id = item.ApplicationId})
+    </td>
     </tr>
 }
 

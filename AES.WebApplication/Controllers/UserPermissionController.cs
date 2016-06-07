@@ -18,7 +18,7 @@ namespace AES.WebApplication.Controllers
         // GET: UserPermission
         public async Task<ActionResult> Index()
         {
-            var userPermissions = db.UserPermissions.Include(u => u.User);
+            var userPermissions = db.UserPermissions.Include(u => u.AspNetUser);
             return View(await userPermissions.ToListAsync());
         }
 
@@ -40,7 +40,7 @@ namespace AES.WebApplication.Controllers
         // GET: UserPermission/Create
         public ActionResult Create()
         {
-            ViewBag.UserId = new SelectList(db.Users, "UserId", "UserName");
+            ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "UserName");
             return View();
         }
 
@@ -58,7 +58,7 @@ namespace AES.WebApplication.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.UserId = new SelectList(db.Users, "UserId", "UserName", userPermission.UserId);
+            ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "UserName", userPermission.UserId);
             return View(userPermission);
         }
 
@@ -74,7 +74,7 @@ namespace AES.WebApplication.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.UserId = new SelectList(db.Users, "UserId", "UserName", userPermission.UserId);
+            ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "UserName", userPermission.UserId);
             return View(userPermission);
         }
 
@@ -91,7 +91,7 @@ namespace AES.WebApplication.Controllers
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.UserId = new SelectList(db.Users, "UserId", "UserName", userPermission.UserId);
+            ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "UserName", userPermission.UserId);
             return View(userPermission);
         }
 

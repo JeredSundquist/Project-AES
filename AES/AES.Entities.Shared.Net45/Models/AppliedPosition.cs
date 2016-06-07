@@ -40,6 +40,18 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _PositionId;
 
+		public int? TestScoreRecieved
+		{ 
+			get { return _TestScoreRecieved; }
+			set
+			{
+				if (Equals(value, _TestScoreRecieved)) return;
+				_TestScoreRecieved = value;
+				NotifyPropertyChanged();
+			}
+		}
+		private int? _TestScoreRecieved;
+
 
 		public Position Position
 		{

@@ -6,10 +6,10 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using AES.Entities.Shared.Net45.Models;
 using TrackableEntities;
 using TrackableEntities.EF6;
 using TrackableEntities.Common;
-using AES.Entities.Shared.Net45.Models;
 
 // NOTE: Primary key name and/or type may need to be set manually.
 
@@ -25,6 +25,7 @@ namespace AES.JobLibrarySVC.WebApi.Controllers
         {
             IEnumerable<Application> entities = await _dbContext.Applications
                 // TODO: Add Includes for reference and/or collection properties
+                .Include(p => p.PositionId)
                 .ToListAsync();
 
             return Ok(entities);
@@ -36,6 +37,7 @@ namespace AES.JobLibrarySVC.WebApi.Controllers
         {
             Application entity = await _dbContext.Applications
                 // TODO: Add Includes for reference and/or collection properties
+                .Include(p => p.PositionId)
                 .SingleOrDefaultAsync(e => e.ApplicationId == id);
 
             if (entity == null)

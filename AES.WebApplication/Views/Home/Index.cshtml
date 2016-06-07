@@ -1,47 +1,12 @@
 ﻿@{
+    Layout = "~/Views/Shared/_Splash.cshtml";
     ViewBag.Title = "AES HOME";
 }
 
-<div class="jumbotron">
-    <h1>AES Application Kiosk</h1>
-    <!--<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>-->
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Position</h2>
-        <p>
-            Allows the staffing specialist to prepare a job description linked to a questionnaire which is used to accurately filter future applicants for this job listing.
-        </p>
-        <p><a class="btn btn-default" href="http://localhost:59701/Position">Position Demo &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Questionnaire</h2>
-        <p>This is a list of questions used to filter applicants. The creator may choose passing score.</p>
-        <p><a class="btn btn-default" href="http://localhost:59701/Test">Questionnaire Demo &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Store</h2>
-        <p>Stores are created to associate positions with a specific location.</p>
-        <p><a class="btn btn-default" href="http://localhost:59701/Store">Store Demo &raquo;</a>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Application</h2>
-        <p>Applicants fill these out so that you know not to hire them.</p>
-        <p><a class="btn btn-default" href="http://localhost:59701/Application">Application Demo &raquo;</a>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>User</h2>
-        <p>Users are people who access the system to do things.</p>
-        <p><a class="btn btn-default" href="http://localhost:59701/User">User Demo &raquo;</a>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Permissions</h2>
-        <p>Permissions control who is allowed to use certain features.</p>
-        <p><a class="btn btn-default" href="http://localhost:59701/UserPermission">Permission Demo &raquo;</a></p>
+<div class="splash-container">
+    <div class="logo-container">
+        <a href='@Url.Action("Index", "Position")'>
+            <img id="AESLogo" alt="AESLogo" src="~/aes-logo.png" />
+        </a>
     </div>
 </div>

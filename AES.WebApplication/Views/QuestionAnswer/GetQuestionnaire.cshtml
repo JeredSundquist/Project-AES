@@ -1,0 +1,59 @@
+﻿@model AES.WebApplication.Models.Questionnaire
+
+@{
+    ViewBag.Title = "GetQuestionnaire";
+}
+
+<h2>GetQuestionnaire</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Questionnaire</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+       
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @foreach (var item in Model.questionList)
+                {
+                    @Html.HiddenFor(q => item.correctAnswer)
+                    @Html.HiddenFor(q => item.type)
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(qitem => item.Title)
+                            <br/>
+                        </td>
+                        <td>
+                            @foreach (var answer in item.answerList)
+                            {                    
+                                @Html.DisplayFor(a => answer.answerLetter)
+                                @Html.DisplayFor(a => answer.answerText)
+                                <br/>
+                            }
+                        </td>
+                        <td>
+                            @Html.EditorFor(i => item.selectedAnswer)
+                            <br/>
+                            <br/>
+                        </td>
+                    </tr>
+                }
+                <input type="submit" value="Save" class="btn btn-default"/>
+            </div>
+        </div>
+    </div>
+}
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

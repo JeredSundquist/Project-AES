@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AESDatabase", "AESProject\AESDatabase.sqlproj", "{9ADD3378-78A3-43AE-A70B-5A424D5BCCAD}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD581E29-7BAA-4CB0-A04D-2C8F2B0B0EDE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.ConsoleClient", "AES\AES.ConsoleClient\AES.ConsoleClient.csproj", "{6558B314-B755-4A88-A518-3E97275A696C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.Entities.Shared.Net45", "AES\AES.Entities.Shared.Net45\AES.Entities.Shared.Net45.csproj", "{98F8C001-E6A2-4692-A2A1-8AE6E1D1EC62}"
 EndProject
@@ -15,10 +11,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.JobLibrarySVC.WebApi", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.WebApplication", "AES.WebApplication\AES.WebApplication.csproj", "{438D7886-D373-4F48-AD2C-2D03ED039D28}"
 	ProjectSection(ProjectDependencies) = postProject
+		{C325B758-4F22-439A-BD24-872CB4F5B100} = {C325B758-4F22-439A-BD24-872CB4F5B100}
 		{A38F066A-EF46-48DC-A004-F95352E751E2} = {A38F066A-EF46-48DC-A004-F95352E751E2}
+		{788971B0-9929-43FE-9BA2-822BA69D14D0} = {788971B0-9929-43FE-9BA2-822BA69D14D0}
+		{2F8B09BD-1823-48C6-AE82-A34931E7201A} = {2F8B09BD-1823-48C6-AE82-A34931E7201A}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.WebApplication.Tests", "AES.WebApplication.Tests\AES.WebApplication.Tests.csproj", "{B5A6EAC4-5795-45DC-B622-51DC5CC79D1B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.ApplicationSVC.WebApi", "AES.ApplicationSVC\AES.ApplicationSVC.WebApi\AES.ApplicationSVC.WebApi.csproj", "{C325B758-4F22-439A-BD24-872CB4F5B100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.PositionRequestSVC.WebApi", "AES.PositionRequestSVC\AES.PositionRequestSVC.WebApi\AES.PositionRequestSVC.WebApi.csproj", "{2F8B09BD-1823-48C6-AE82-A34931E7201A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AES.SecuritySVC.WebApi", "AES.SecuritySVC\AES.SecuritySVC.WebApi\AES.SecuritySVC.WebApi.csproj", "{788971B0-9929-43FE-9BA2-822BA69D14D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{218D1606-6C94-4D3C-A815-92C7B33508AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,10 +37,6 @@ Global
 		{9ADD3378-78A3-43AE-A70B-5A424D5BCCAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ADD3378-78A3-43AE-A70B-5A424D5BCCAD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9ADD3378-78A3-43AE-A70B-5A424D5BCCAD}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{6558B314-B755-4A88-A518-3E97275A696C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6558B314-B755-4A88-A518-3E97275A696C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6558B314-B755-4A88-A518-3E97275A696C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6558B314-B755-4A88-A518-3E97275A696C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{98F8C001-E6A2-4692-A2A1-8AE6E1D1EC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{98F8C001-E6A2-4692-A2A1-8AE6E1D1EC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98F8C001-E6A2-4692-A2A1-8AE6E1D1EC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -48,10 +49,18 @@ Global
 		{438D7886-D373-4F48-AD2C-2D03ED039D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{438D7886-D373-4F48-AD2C-2D03ED039D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{438D7886-D373-4F48-AD2C-2D03ED039D28}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B5A6EAC4-5795-45DC-B622-51DC5CC79D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B5A6EAC4-5795-45DC-B622-51DC5CC79D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B5A6EAC4-5795-45DC-B622-51DC5CC79D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5A6EAC4-5795-45DC-B622-51DC5CC79D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C325B758-4F22-439A-BD24-872CB4F5B100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C325B758-4F22-439A-BD24-872CB4F5B100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C325B758-4F22-439A-BD24-872CB4F5B100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C325B758-4F22-439A-BD24-872CB4F5B100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F8B09BD-1823-48C6-AE82-A34931E7201A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F8B09BD-1823-48C6-AE82-A34931E7201A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F8B09BD-1823-48C6-AE82-A34931E7201A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F8B09BD-1823-48C6-AE82-A34931E7201A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{788971B0-9929-43FE-9BA2-822BA69D14D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{788971B0-9929-43FE-9BA2-822BA69D14D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{788971B0-9929-43FE-9BA2-822BA69D14D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{788971B0-9929-43FE-9BA2-822BA69D14D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

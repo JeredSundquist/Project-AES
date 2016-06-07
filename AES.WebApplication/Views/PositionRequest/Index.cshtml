@@ -1,0 +1,87 @@
+﻿@model IEnumerable<AES.Entities.Shared.Net45.Models.PositionRequest>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestedByName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PositionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StoreId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestReason)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateRequested)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestApproved)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApproveBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApprovedByName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateApproved)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestedByName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PositionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StoreId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestReason)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateRequested)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestApproved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApproveBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovedByName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateApproved)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RequestId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RequestId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RequestId })
+        </td>
+    </tr>
+}
+
+</table>

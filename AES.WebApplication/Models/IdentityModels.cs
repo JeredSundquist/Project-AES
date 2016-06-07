@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using AES.Entities.Shared.Net45.Models;
 
 namespace AES.WebApplication.Models
 {
@@ -21,7 +22,7 @@ namespace AES.WebApplication.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("AESEntitiesModel", throwIfV1Schema: false)
         {
         }
 

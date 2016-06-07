@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Test</h2>
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,13 +12,88 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.QuestionName)
+            @Html.DisplayNameFor(model => model.PositionId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.QuestionList)
+            @Html.DisplayNameFor(model => model.QaId01)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.passingScore)
+            @Html.DisplayNameFor(model => model.QaId02)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId03)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId04)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId05)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId06)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId07)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId08)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId09)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId11)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId12)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId13)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId14)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId15)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId16)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId17)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId18)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId19)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId20)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId21)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId22)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId23)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId24)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QaId25)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassingScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalScore)
         </th>
         <th></th>
     </tr>
@@ -26,16 +101,91 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.QuestionName)
+            @Html.DisplayFor(modelItem => item.PositionId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.QuestionList)
+            @Html.DisplayFor(modelItem => item.QaId01)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.passingScore)
+            @Html.DisplayFor(modelItem => item.QaId02)
         </td>
         <td>
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.TestId }) |*@
+            @Html.DisplayFor(modelItem => item.QaId03)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId04)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId05)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId06)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId07)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId08)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId09)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId11)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId12)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId13)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId14)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId15)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId16)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId17)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId18)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId19)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId20)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId21)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId22)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId23)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId24)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QaId25)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassingScore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalScore)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TestId }) |
             @Html.ActionLink("Details", "Details", new { id=item.TestId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.TestId })
         </td>
