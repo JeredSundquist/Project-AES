@@ -22,6 +22,7 @@ namespace AES.Entities.Shared.Net45.Models
 		}
 		private int _TestId;
 
+        [Required]
 		public string TestName
 		{ 
 			get { return _TestName; }

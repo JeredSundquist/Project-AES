@@ -176,11 +176,16 @@ namespace AES.WebApplication.Controllers
                     // 1-> 5 are 's'
                     if (question.type == "M")
                     { 
-                        question.answerList.Add(new Answer(item.MC_AnswerText1, "1) "));
-                        question.answerList.Add(new Answer(item.MC_AnswerText2, "2) "));
-                        question.answerList.Add(new Answer(item.MC_AnswerText3, "3) "));
-                        question.answerList.Add(new Answer(item.MC_AnswerText4, "4) "));
-                        question.answerList.Add(new Answer(item.MC_AnswerText5, "5) "));
+                        if( item.MC_AnswerText1 != null)
+                            question.answerList.Add(new Answer(item.MC_AnswerText1, "1) "));
+                        if (item.MC_AnswerText2 != null)
+                            question.answerList.Add(new Answer(item.MC_AnswerText2, "2) "));
+                        if (item.MC_AnswerText3 != null)
+                            question.answerList.Add(new Answer(item.MC_AnswerText3, "3) "));
+                        if (item.MC_AnswerText4 != null)
+                            question.answerList.Add(new Answer(item.MC_AnswerText4, "4) "));
+                        if (item.MC_AnswerText5 != null)
+                            question.answerList.Add(new Answer(item.MC_AnswerText5, "5) "));
                     }
                     else if(question.type == "T")
                     {

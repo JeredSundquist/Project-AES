@@ -30,19 +30,19 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.StoreId, "StoreId", htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-10">
+            <div class="col-md-5">
                 @Html.DropDownListFor(model => model.StoreId, new SelectList(ViewBag.Stores, "StoreId", "StoreName"), new {@class = "form-control"})
                 @Html.ValidationMessageFor(model => model.StoreId, "", new {@class = "text-danger"})
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TestId, "TestId", htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.TestId, new SelectList(ViewBag.Tests, "TestId", "TestName"), new {@class = "control-label col-md-2"})
+            @Html.LabelFor(model => model.TestId, "Test Name", htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-5">
+                @Html.DropDownListFor(model => model.TestId, new SelectList(ViewBag.Tests, "TestId", "TestName"), new {@class = "form-control"})
                 @Html.ValidationMessageFor(model => model.TestId, "", new {@class = "text-danger"})
             </div>
-
+            <br />
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Create" class="btn btn-default"/>

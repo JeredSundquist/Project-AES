@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.TestId)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.TestName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.QaId01)
         </th>
         <th>
@@ -102,6 +105,9 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.TestId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.QaId01)
