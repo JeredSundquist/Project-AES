@@ -47,8 +47,11 @@ namespace AES.WebApplication.Controllers
         }
 
         // GET: Application/Create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
+            Application application = new Application();
+            application.PositionId = id;
+            ViewData["id"] = application.PositionId;
             return View();
         }
 

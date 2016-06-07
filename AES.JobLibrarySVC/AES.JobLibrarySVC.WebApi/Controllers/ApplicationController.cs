@@ -25,6 +25,7 @@ namespace AES.JobLibrarySVC.WebApi.Controllers
         {
             IEnumerable<Application> entities = await _dbContext.Applications
                 // TODO: Add Includes for reference and/or collection properties
+                .Include(p => p.PositionId)
                 .ToListAsync();
 
             return Ok(entities);
@@ -36,6 +37,7 @@ namespace AES.JobLibrarySVC.WebApi.Controllers
         {
             Application entity = await _dbContext.Applications
                 // TODO: Add Includes for reference and/or collection properties
+                .Include(p => p.PositionId)
                 .SingleOrDefaultAsync(e => e.ApplicationId == id);
 
             if (entity == null)
