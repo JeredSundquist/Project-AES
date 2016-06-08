@@ -140,6 +140,11 @@ namespace AES.WebApplication.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Questionnaire()
+        {
+            return RedirectToAction("Questionnaire/GetQuestionnaire");
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
